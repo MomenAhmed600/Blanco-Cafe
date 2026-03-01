@@ -1,0 +1,403 @@
+{
+  "BEST-SELLER": [
+    {
+      "id": "1",
+      "title": "ANY HOT DRINK + ANY DESSERT",
+      "description": "Indulge in a moment of pure bliss. Pair any of our signature hot drinks with your favorite dessert.",
+      "image": "/img/hot-drink&dessert.png",
+      "price": "140"
+    },
+    {
+      "id": "2",
+      "title": "ANY 2 SANDWICHES + 2 FRIES + 2 CAN",
+      "description": "Double the taste, double the fun! Pick any 2 sandwiches, paired with 2 crispy fries and 2 refreshing cans.",
+      "image": "/img/2-sandwetich.png",
+      "price": "350"
+    },
+    {
+      "id": "3",
+      "title": "2 PASTA + 2 CAN",
+      "description": "Double the pasta, double the love Enjoy any 2 of our signature pasta bowls with 2 refreshing cans. The perfect Italian date night starts here.",
+      "image": "/img/2-pasta.png",
+      "price": "350"
+    }
+  ],
+  "BEST-Products": [
+    {
+      "id": "4",
+      "title": "Classic Turkish Coffee",
+      "description": "Experience the essence of premium coffee with our expertly roasted beans, crafted for true coffee lovers who appreciate quality, freshness, and bold flavor.",
+      "image": "/img/products-cofee.png"
+    },
+    {
+      "id": "5",
+      "title": "Turkish Coffee",
+      "description": "A refined selection of premium coffee beans, thoughtfully packaged to offer an exceptional coffee experience or the perfect gift for coffee enthusiasts.",
+      "image": "/img/products-cofee.png"
+    },
+    {
+      "id": "6",
+      "title": "Turkish Coffee [Hail]",
+      "description": "High-quality coffee beans with a rich taste and deep aroma, perfect for your daily coffee moments.",
+      "image": "/img/products-cofee.png"
+    }
+  ],
+  "PRODUCTS-SELLER": [
+    {
+      "id": "7",
+      "title": "Turkish Coffee",
+      "description": "Medium or Dark Roast.",
+      "image": "/img/products-cofee.png",
+      "price": "250"
+    },
+    {
+      "id": "8",
+      "title": "Turkish Coffee [Hail]",
+      "description": "Medium or Dark Roast.",
+      "image": "/img/products-cofee.png",
+      "price": "300"
+    },
+    {
+      "id": "9",
+      "title": "Classic Turkish Coffee",
+      "description": "Medium Roast.",
+      "image": "/img/products-cofee.png",
+      "price": "300"
+    },
+    {
+      "id": "10",
+      "title": "Classic Turkish Coffee [Hail]",
+      "description": "Medium Roast.",
+      "image": "/img/products-cofee.png",
+      "price": "350"
+    },
+    {
+      "id": "11",
+      "title": "Espresso",
+      "image": "/img/products-cofee.png",
+      "price": "300"
+    },
+    {
+      "id": "12",
+      "title": "Greek Coffee",
+      "image": "/img/products-cofee.png",
+      "price": "300"
+    },
+    {
+      "id": "13",
+      "title": "Hazelnut Coffee",
+      "description": "Medium or Dark Roast.",
+      "image": "/img/products-cofee.png",
+      "price": "300"
+    },
+    {
+      "id": "14",
+      "title": "Cinnamon Coffee [Hail]",
+      "image": "/img/products-cofee.png",
+      "price": "300"
+    },
+    {
+      "id": "15",
+      "title": "Die Hard Espresso",
+      "description": "Highly Caffeinated.",
+      "image": "/img/products-cofee.png",
+      "price": "550"
+    },
+    {
+      "id": "16",
+      "title": "24K Gold Espresso",
+      "description": "Gold Plated Coffes Beanes.",
+      "image": "/img/products-cofee.png",
+      "price": "550"
+    },
+    {
+      "id": "17",
+      "title": "Speciality Coffee",
+      "image": "/img/products-cofee.png",
+      "price": "550"
+    }
+  ],
+  "Special-Sale": [
+    {
+      "id": "1ssa1",
+      "title": "ANY HOT DRINK + ANY DESSERT",
+      "description": "Pair your favorite drink with a sweet treat.",
+      "image": "/img/hot-drink&dessert.png",
+      "price": "140"
+    },
+    {
+      "id": "2ssa1",
+     "title": "2 SANDWICHES+2 FRIES+2 CAN",
+      "description": "Double the Meal, Double the Fun!",
+      "image": "/img/2-sandwetich.png",
+      "price": "350"
+    },
+    {
+      "id": "3ssa1",
+       "title": "2 PASTA + 2 CAN",
+      "description": "Double Pasta, Double Love: 2 Bowls & 2 Drinks.",
+      "image": "/img/2-pasta.png",
+      "price": "350"
+    },
+    {
+      "id": "4ssa1",
+      "title": "ANY 2 POUTINES",
+      "description": "Besties' Deal: 2 Poutines = 300 LE.",
+      "image": "/img/2-poutine.png",
+      "price": "300"
+    },
+    {
+      "id": "5ssa1",
+      "title": "ANY 2 PYREX OR 2 EMY SHISHA",
+      "description": "Double the Vibe: 2 Shishas (Pyrex/Emy) for 200 LE (+VAT).",
+      "image": "/img/2-shesha.png",
+      "price": "200"
+    }
+  ],
+  "TURKISH-COFFEE": [
+    {
+      "id": "18",
+      "title": "Turkish Coffee",
+      "image": "https://rozalinarestaurant.ae/cdn/shop/products/special-turkish-coffee-set-contains-6-d524.jpg?v=1644828991",
+      "price": "38"
+    },
+    {
+      "id": "19",
+      "title": "Double Turkish Coffee",
+      "description": "Medium or Dark Roast",
+      "image": "https://www.nescafe.com/gb/sites/default/files/2023-11/Untitled-5%20copy_7.jpg",
+      "price": "48"
+    },
+    {
+      "id": "20",
+      "title": "Nutella Coffee",
+      "description": "Medium Roast",
+      "image": "https://rozalinarestaurant.ae/cdn/shop/products/special-turkish-coffee-set-contains-6-d524.jpg?v=1644828991",
+      "price": "69"
+    },
+    {
+      "id": "21",
+      "title": "French Coffee",
+      "description": "Medium Roast",
+      "image": "https://www.nescafe.com/gb/sites/default/files/2023-11/Untitled-5%20copy_7.jpg",
+      "price": "52"
+    },
+    {
+      "id": "22",
+      "title": "Hazelnut Coffee",
+      "description": "Medium Roast",
+      "image": "https://www.nescafe.com/gb/sites/default/files/2023-11/Untitled-5%20copy_7.jpg",
+      "price": "72"
+    }
+  ],
+  "ESPRESSO": [
+    {
+      "id": "23",
+      "title": "ESPRESSO",
+      "image": "https://www.sharmispassions.com/wp-content/uploads/2012/07/espresso-coffee-recipe04-500x500.jpg",
+      "price": "55"
+    },
+    {
+      "id": "24",
+      "title": "Double Espresso",
+      "image": "https://coffeegeek.com/wp-content/uploads/2019/09/espressohowto-11.jpg",
+      "price": "60"
+    },
+    {
+      "id": "25",
+      "title": "Espresso Avocado",
+      "image": "https://media01.stockfood.com/largepreviews/NDE2NDQyMDM0/13433614-Geschichteter-Avocado-Creme-Espresso.jpg",
+      "price": "69"
+    },
+    {
+      "id": "26",
+      "title": "Cappuccino",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVt__A8bvTk9UbAp6N28awtRlQjJxssNuLA&s",
+      "price": "75"
+    },
+    {
+      "id": "27",
+      "title": "Latte",
+      "image": "https://www.brighteyedbaker.com/wp-content/uploads/2024/07/Dulce-de-Leche-Latte-Recipe.jpg",
+      "price": "77"
+    },
+    {
+      "id": "28",
+      "title": "Spanish Latte",
+      "image": "https://lifestyleofafoodie.com/wp-content/uploads/2024/04/Spanish-Latte-Recipe-5.jpg",
+      "price": "95"
+    },
+    {
+      "id": "29",
+      "title": "Mocha",
+      "image": "https://athome.starbucks.com/sites/default/files/styles/recipe_banner_xlarge/public/2024-05/CaffeMocha_RecipeHeader_848x539_%402x.jpg.webp?itok=ov3gQo8W",
+      "price": "77"
+    },
+    {
+      "id": "30",
+      "title": "Macchiato",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BUhLFQod_-Sy8gNY_AomaugSocYQYnYyNA&s",
+      "price": "67"
+    },
+    {
+      "id": "31",
+      "title": "Double Macchiato",
+      "image": "https://www.starbucks.com.hk/media/catalog/product/1/c/1cb9e666-d326-4c13-b1a1-562ea374a525_1_2.jpg",
+      "price": "77"
+    },
+    {
+      "id": "32",
+      "title": "Corto",
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/0f/91/4c/15/classic-corto.jpg",
+      "price": "72"
+    },
+    {
+      "id": "33",
+      "title": "Flat White",
+      "image": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/3/7/1394188793056/Flat-White-Coffee--012.jpg?width=465&dpr=1&s=none&crop=none",
+      "price": "85"
+    },
+    {
+      "id": "34",
+      "title": "American Coffee",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSan5-ghzEHeYJ6aP7NRgjBHE6q7kdubkspvg&s",
+      "price": "80"
+    }
+  ],
+"HOT-DRINKS": [
+    {
+      "id": "35",
+      "title": "Nescafe",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ASmMAsmFLoYTAofDFMCy-ykfU405tBBzIA&s",
+      "price": "74"
+    },
+    {
+      "id": "36",
+      "title": "Hot Cider",
+      "image": "https://www.thecountrycook.net/wp-content/uploads/2021/10/thumbnail-Homemade-Apple-Cider.jpg",
+      "price": "52"
+    },
+    {
+      "id": "37",
+      "title": "Hot Chocolate",
+      "image": "https://www.foodandwine.com/thmb/VSSakyBhpjt2NWTKQUAU05eb2xM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Spiked-Peanut-Butter-Hot-Chocolate-FT-MAG-RECIPE-0225-b72b3e0d1545494aa9702eff42669656.jpg",
+      "price": "73"
+    },
+    {
+      "id": "38",
+      "title": "Hot Herps",
+      "image": "https://www.wisdomlib.org/uploads/recipes/1024x768_crop/hot-drink-10486.jpg",
+      "price": "47"
+    },
+    {
+      "id": "39",
+      "title": "Vitamin C",
+      "image": "https://www.vindulge.com/wp-content/uploads/2021/09/Bourbon-Spiked-Hot-Apple-Cider-glass.jpg",
+      "price": "57"
+    },
+    {
+      "id": "40",
+      "title": "Sahlab",
+      "image": "https://static.wixstatic.com/media/059721_7db39f448c944505be0e171ab00584a1~mv2.jpg/v1/fill/w_568,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/059721_7db39f448c944505be0e171ab00584a1~mv2.jpg",
+      "price": "77"
+    },
+    {
+      "id": "41",
+      "title": "Tea",
+      "image": "https://www.aicr.org/wp-content/uploads/2020/06/peppermint-tea-on-teacup-1417945.jpg",
+      "price": "32"
+    },
+    {
+      "id": "42",
+      "title": "Brad Tea",
+      "image": "https://www.sattvicfoods.in/cdn/shop/articles/oolong-green-tea-teapot-bowl_3_520x500_436ff780-707f-4ee0-ae1c-0c951ea619f0.jpg?v=1736510346",
+      "price": "45"
+    },
+    {
+      "id": "43",
+      "title": "Tea With Milk",
+      "image": "https://images.getrecipekit.com/20230704115527-gyokuro-20milk-20tea-20recipe.jpg?class=16x9",
+      "price": "55"
+    },
+    {
+      "id": "44",
+      "title": "Brad Tea With Milk",
+      "image": "https://www.basilurtea.com.au/cdn/shop/articles/1_a9460d73-12d3-450a-b502-fb3d0bcdf05b.webp?v=1731419611",
+      "price": "60"
+    },
+    {
+      "id": "45",
+      "title": "Matcha",
+      "image": "https://greenutshealthyfood.com/cdn/shop/files/WhatsAppImage2024-03-25at2.04.34PM_1.jpg?v=1711396942&width=1024",
+      "price": "95"
+    },
+    {
+      "id": "46",
+      "title": "Tea Flavors",
+      "image": "https://bradleys-tea.co.uk/wp-content/uploads/Axxent-93-scaled-e1758524448301.jpg",
+      "price": "45"
+    },
+    {
+      "id": "47",
+      "title": "Brad Tea Flavors",
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/81fZqJsOfBL._AC_UL495_SR435,495_.jpg",
+      "price": "50"
+    },
+    {
+      "id": "48",
+      "title": "Tea Flavors With Milk",
+      "image": "https://www.basilurtea.com.au/cdn/shop/articles/1_a9460d73-12d3-450a-b502-fb3d0bcdf05b.webp?v=1731419611",
+      "price": "65"
+    },
+    {
+      "id": "49",
+      "title": "Brad Tea Flavors With Milk",
+      "image": "https://www.basilurtea.com.au/cdn/shop/articles/1_a9460d73-12d3-450a-b502-fb3d0bcdf05b.webp?v=1731419611",
+      "price": "70"
+    }
+  ],
+  "SOFT-DRINKS": [
+    {
+      "id": "51",
+      "title": "Pepsi",
+      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/22cbf2af-3b0b-4b2c-be29-2a830cdf4e21.jpg",
+      "price": {
+        "Medium": 75
+      }
+    },
+    {
+      "id": "52",
+      "title": "7up",
+      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/f345e094-2e3b-490f-ac32-a150207c4a17.jpg",
+      "price": {
+        "Medium": 75
+      }
+    },
+    {
+      "id": "53",
+      "title": "RedBull",
+      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/cb7acfcc-4bfe-4338-8a9b-8b42b4ffc5ff.jpg",
+      "price": {
+        "Medium": 130
+      }
+    },
+    {
+      "id": "54",
+      "title": "Soda Mocktails",
+      "description": "Ask For Menu",
+      "image": "https://www.fentimans.com/cdn/shop/articles/fentimans-san-francisco-mocktail_f999827f-e861-4610-8b49-d69d0b739a0c.jpg?v=1752678713",
+      "price": {
+        "Medium": 130
+      }
+    },
+    {
+      "id": "55",
+      "title": "RedBull Mocktails",
+      "description": "Ask For Menu",
+      "image": "https://i.ytimg.com/vi/dXZ14Xzp4nY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBDQ3_JnU0hpJWfRxJ_X_QMlpi3Ag",
+      "price": {
+        "Medium": 160
+      }
+    }
+  ]
+}

@@ -85,11 +85,19 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* section-img */}
             <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-2xl">
-              <img
+              {/* <img
                 className="w-full h-full object-cover"
-                src="/img/video-photo.PNG"
+                src="/img/video-photo.png"
                 alt="Video Photo"
-              />
+              /> */}
+              <video
+                src="/img/video-about.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover rounded-[2rem]"
+              ></video>
             </div>
 
             {/* section-text */}
@@ -117,9 +125,9 @@ const About = () => {
         </motion.div>
       </section>
 
-      <section className="bg-gray-900 text-black py-16 px-6 md:px-12 lg:px-24">
+      <section className="bg-gray-900 text-black pt-12 pb-0 px-6 md:px-12 lg:px-24 w-full">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -141,7 +149,7 @@ const About = () => {
                 <Popup>
                   <div className="text-center font-sans">
                     <h3 className="font-bold text-blue-700">فرع الإسكندرية</h3>
-                    <p className="text-xs">محطة الرمل، الإسكندرية</p>
+                    <p className="text-xs">سموحة، الإسكندرية</p>
                   </div>
                 </Popup>
               </Marker>

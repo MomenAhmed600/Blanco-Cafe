@@ -42,114 +42,39 @@
       "image": "/img/products-cofee.png"
     }
   ],
-  "PRODUCTS-SELLER": [
-    {
-      "id": "7",
-      "title": "Turkish Coffee",
-      "description": "Medium or Dark Roast.",
-      "image": "/img/products-cofee.png",
-      "price": "250"
-    },
-    {
-      "id": "8",
-      "title": "Turkish Coffee [Hail]",
-      "description": "Medium or Dark Roast.",
-      "image": "/img/products-cofee.png",
-      "price": "300"
-    },
-    {
-      "id": "9",
-      "title": "Classic Turkish Coffee",
-      "description": "Medium Roast.",
-      "image": "/img/products-cofee.png",
-      "price": "300"
-    },
-    {
-      "id": "10",
-      "title": "Classic Turkish Coffee [Hail]",
-      "description": "Medium Roast.",
-      "image": "/img/products-cofee.png",
-      "price": "350"
-    },
-    {
-      "id": "11",
-      "title": "Espresso",
-      "image": "/img/products-cofee.png",
-      "price": "300"
-    },
-    {
-      "id": "12",
-      "title": "Greek Coffee",
-      "image": "/img/products-cofee.png",
-      "price": "300"
-    },
-    {
-      "id": "13",
-      "title": "Hazelnut Coffee",
-      "description": "Medium or Dark Roast.",
-      "image": "/img/products-cofee.png",
-      "price": "300"
-    },
-    {
-      "id": "14",
-      "title": "Cinnamon Coffee [Hail]",
-      "image": "/img/products-cofee.png",
-      "price": "300"
-    },
-    {
-      "id": "15",
-      "title": "Die Hard Espresso",
-      "description": "Highly Caffeinated.",
-      "image": "/img/products-cofee.png",
-      "price": "550"
-    },
-    {
-      "id": "16",
-      "title": "24K Gold Espresso",
-      "description": "Gold Plated Coffes Beanes.",
-      "image": "/img/products-cofee.png",
-      "price": "550"
-    },
-    {
-      "id": "17",
-      "title": "Speciality Coffee",
-      "image": "/img/products-cofee.png",
-      "price": "550"
-    }
-  ],
   "Special-Sale": [
     {
       "id": "1ssa1",
-      "title": "ANY HOT DRINK + ANY DESSERT",
+      "title": "ANY DESSERT + ANY HOT DRINK",
       "description": "Pair your favorite drink with a sweet treat.",
       "image": "/img/hot-drink&dessert.png",
       "price": "140"
     },
     {
       "id": "2ssa1",
-     "title": "2 SANDWICHES+2 FRIES+2 CAN",
+      "title": "TWO SANDWICHES+ TWO FRIES+ TWO CAN",
       "description": "Double the Meal, Double the Fun!",
       "image": "/img/2-sandwetich.png",
       "price": "350"
     },
     {
       "id": "3ssa1",
-       "title": "2 PASTA + 2 CAN",
+      "title": "TWO PASTA + TWO CAN",
       "description": "Double Pasta, Double Love: 2 Bowls & 2 Drinks.",
       "image": "/img/2-pasta.png",
       "price": "350"
     },
     {
       "id": "4ssa1",
-      "title": "ANY 2 POUTINES",
+      "title": "ANY TWO POUTINES",
       "description": "Besties' Deal: 2 Poutines = 300 LE.",
       "image": "/img/2-poutine.png",
       "price": "300"
     },
     {
       "id": "5ssa1",
-      "title": "ANY 2 PYREX OR 2 EMY SHISHA",
-      "description": "Double the Vibe: 2 Shishas (Pyrex/Emy) for 200 LE (+VAT).",
+      "title": "TWO PYREX OR TWO EMY SHISHA",
+      "description": "2 Shishas (Pyrex/Emy) for 200 LE (+VAT).",
       "image": "/img/2-shesha.png",
       "price": "200"
     }
@@ -224,7 +149,7 @@
     {
       "id": "28",
       "title": "Spanish Latte",
-      "image": "https://lifestyleofafoodie.com/wp-content/uploads/2024/04/Spanish-Latte-Recipe-5.jpg",
+      "image": "https://slojo.co.za/wp-content/uploads/2025/05/NEW_DRINK-Website-resize_630x870px_coffee-over-ice.png",
       "price": "95"
     },
     {
@@ -264,7 +189,7 @@
       "price": "80"
     }
   ],
-"HOT-DRINKS": [
+  "HOT-DRINKS": [
     {
       "id": "35",
       "title": "Nescafe",
@@ -356,48 +281,254 @@
       "price": "70"
     }
   ],
-  "SOFT-DRINKS": [
+  "COCKTAILS": [
+    {
+      "id": "50",
+      "title": "AFRICANO",
+      "description": "MANGO / KIWI / BANANA",
+      "image": "https://www.campariacademy.com/en-us/wp-content/uploads/sites/3/2022/07/Campari-Americano-Cocktail-Image.jpg",
+      "price": "110"
+    },
     {
       "id": "51",
-      "title": "Pepsi",
-      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/22cbf2af-3b0b-4b2c-be29-2a830cdf4e21.jpg",
-      "price": {
-        "Medium": 75
-      }
+      "title": "FLORIDA",
+      "description": "MANGO / GWAVA / STRAWBERRY",
+      "image": "https://i0.wp.com/cruisecocoa.com/wp-content/uploads/2024/12/AdobeStock_167772153.jpeg?fit=1568%2C1045&ssl=1",
+      "price": "95"
     },
     {
       "id": "52",
-      "title": "7up",
-      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/f345e094-2e3b-490f-ac32-a150207c4a17.jpg",
-      "price": {
-        "Medium": 75
-      }
+      "title": "ELECTRIC SHOCK",
+      "description": "LEMON / ORANGE / BLUE CURACAO",
+      "image": "https://s3.amazonaws.com/perfectcontent/images/be9cb5e0-1953-11e6-bced-45404e44cb61.jpg",
+      "price": "90"
     },
     {
       "id": "53",
-      "title": "RedBull",
-      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/cb7acfcc-4bfe-4338-8a9b-8b42b4ffc5ff.jpg",
-      "price": {
-        "Medium": 130
-      }
+      "title": "BLANCO COCKTAIL",
+      "description": "MANGO / AVOCADO/NUTS.",
+      "image": "https://californiaavocado.com/wp-content/uploads/2020/08/California-Avocado-Zen-Cocktail.jpeg",
+      "price": "114"
     },
     {
       "id": "54",
-      "title": "Soda Mocktails",
-      "description": "Ask For Menu",
-      "image": "https://www.fentimans.com/cdn/shop/articles/fentimans-san-francisco-mocktail_f999827f-e861-4610-8b49-d69d0b739a0c.jpg?v=1752678713",
-      "price": {
-        "Medium": 130
-      }
+      "title": "BLENDER YOGURT",
+      "description": "YOGURT / FRUITS / MILK",
+      "image": "https://happyfoodhealthylife.com/wp-content/uploads/2024/02/greek-yogurt-smoothie-recipe.jpg",
+      "price": "95"
     },
     {
       "id": "55",
-      "title": "RedBull Mocktails",
-      "description": "Ask For Menu",
-      "image": "https://i.ytimg.com/vi/dXZ14Xzp4nY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBDQ3_JnU0hpJWfRxJ_X_QMlpi3Ag",
-      "price": {
-        "Medium": 160
-      }
+      "title": "AVOCADO DATE",
+      "description": "AVOCADO / DATE / NUTS",
+      "image": "https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/53/81/18/YRRBiQKqCRg9p40wOWQO_VELAS%20VALLARTA.jpg",
+      "price": "114"
+    },
+    {
+      "id": "56",
+      "title": "PINA COLADA",
+      "description": ".PINEAPPLE / COCONUT",
+      "image": "https://cookingwithcurls.com/wp-content/uploads/2015/05/Classic-Pi%C3%B1a-Colada-A-sweet-tropical-cocktail-made-with-rum-pineapple-juice-and-coconut-cream-cookingwithcurls.com_.jpg",
+      "price": "84"
+    },
+    {
+      "id": "57",
+      "title": "COLD PINE",
+      "description": "PINEAPPLE / BLUE CURACAO",
+      "image": "https://mixthatdrink.com/wp-content/uploads/2013/10/blue-skies-drink-735x1103.jpg",
+      "price": "81"
+    },
+    {
+      "id": "58",
+      "title": "HEALTHY TRIP",
+      "description": "YOGURT / MANGO / MILK / STRAWBERRY",
+      "image": "https://annetravelfoodie.com/wp-content/uploads/2018/06/mocktails-alcohol-free-cocktails-950x950.jpg",
+      "price": "95"
+    },
+    {
+      "id": "59",
+      "title": "JUNGLE NUTS",
+      "description": "BANANA / MILK / NUTS / CHOCOLATE",
+      "image": "https://salimaskitchen.com/wp-content/uploads/2022/04/Jungle-Bird-Salimas-Kitchen-10-2-504x672.jpg",
+      "price": "103"
+    },
+    {
+      "id": "60",
+      "title": "HIGH POWER",
+      "description": "AVCADO / KIWI / MILK / BANANA",
+      "image": "https://empirewine.imgix.net/blog/402_1752076781148.jpg?w=1200",
+      "price": "130"
+    },
+    {
+      "id": "61",
+      "title": "TROPICAL ZONE",
+      "description": "YOGURT / MANGO / PEACH",
+      "image": "https://mybartender.com/wp-content/uploads/2024/09/Tropical-Blue-Zone.png",
+      "price": "78"
+    },
+    {
+      "id": "62",
+      "title": "BANANA BERRY",
+      "description": "YOGURT / BANANA / BLUEBERRY",
+      "image": "https://drinksworld.com/wp-content/uploads/Banana-Berry-Colada-scaled.jpg",
+      "price": "78"
+    },
+    {
+      "id": "63",
+      "title": "CHERRY BOOM",
+      "description": "CHERRY / POMMEGRANATE",
+      "image": "https://images.squarespace-cdn.com/content/v1/51dce364e4b01df64ad480fa/cc5c3071-39b6-4a5c-bc75-b082e733277b/Cherry+Bomb+Cocktail+Recipe.jpg",
+      "price": "74"
+    },
+    {
+      "id": "64",
+      "title": "MILKY STRAW",
+      "description": "YOGURT / STRAWBERRY / LOTUS / MILK",
+      "image": "https://www.sweetteaandthyme.com/wp-content/uploads/2025/04/strawberry-shortcake-martini-hero.jpg",
+      "price": "103"
+    },
+    {
+      "id": "65",
+      "title": "CHOCO STRAW",
+      "description": "STRAWBERRY / MILK / NUTELLA / VANILLA",
+      "image": "https://png.pngtree.com/png-clipart/20240727/original/pngtree-chocolate-milkshake-in-a-glass-with-a-straw-png-image_15645813.png",
+      "price": "103"
+    },
+    {
+      "id": "66",
+      "title": "GREEN METAL",
+      "description": "AVOCADO / GREEN APPLE / MILK / PISTACHIO",
+      "image": "https://www.skinnymixes.com/cdn/shop/articles/Sours_-_GREEN-8.png?v=1703918513",
+      "price": "113"
+    }
+  ],
+  "SOFT-DRINKS": [
+    {
+      "id": "67",
+      "title": "Pepsi",
+      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/22cbf2af-3b0b-4b2c-be29-2a830cdf4e21.jpg",
+      "price": "55"
+    },
+    {
+      "id": "68",
+      "title": "7up",
+      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/f345e094-2e3b-490f-ac32-a150207c4a17.jpg",
+      "price": "55"
+    },
+    {
+      "id": "69",
+      "title": "RedBull",
+      "image": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/cb7acfcc-4bfe-4338-8a9b-8b42b4ffc5ff.jpg",
+      "price": "95"
+    },
+    {
+      "id": "70",
+      "title": "Fayrouz",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj-M_S91DyDyyzxwCnzA3xu5BawCcjoWFEPQ&s",
+      "price": "60"
+    },
+    {
+      "id": "71",
+      "title": "Mineral Water",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV4qRGfXyZGvaWmg8p8vKCoBB-4TNgm3vcCg&s",
+      "price": "20"
+    }
+  ],
+  "POUTINE FRIES": [
+    {
+      "id": "72",
+      "title": "Poutine Burger",
+      "image": "/img/Poutine Burger.png",
+      "price": "190"
+    },
+    {
+      "id": "73",
+      "title": "Poutine Grilled Chicken",
+      "description": "Medium or Dark Roast",
+      "image": "/img/Poutine Grilled Chicken.PNG",
+      "price": "195"
+    },
+    {
+      "id": "74",
+      "title": "Poutine Crispy",
+      "description": "Medium Roast",
+      "image": "/img/Poutine Crispy.PNG",
+      "price": "185"
+    },
+    {
+      "id": "75",
+      "title": "Poutine Jalapeno",
+      "description": "Medium Roast",
+      "image": "/img/Poutine Jalapeno.PNG",
+      "price": "180"
+    }
+  ],
+  "BURGERS": [
+    {
+      "id": "76",
+      "title": "Classic Burger",
+      "image": "https://mymarios.com/pystedod/2020/04/Classic-Burger-MARIOSBurgers-MJ6280-25.7.2020-online.png",
+      "price": "150"
+    },
+    {
+      "id": "77",
+      "title": "Cheese Burger",
+      "image": "https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg",
+      "price": "160"
+    },
+    {
+      "id": "78",
+      "title": "BBQ Burger",
+      "image": "https://dudethatcookz.com/wp-content/uploads/2020/04/Double_BBQ_Cheddar_Burger14_Hero.jpg",
+      "price": "160"
+    },
+    {
+      "id": "79",
+      "title": "Ranch Burger",
+      "image": "https://jamjarkitchen.com/wp-content/uploads/2021/08/DSC_0584.jpg",
+      "price": "160"
+    },
+    {
+      "id": "80",
+      "title": "Mushroom Burger",
+      "image": "https://media.istockphoto.com/id/539659420/photo/mushroom-swiss-burger.jpg?s=612x612&w=0&k=20&c=jMNa1F6VJmUGvDafmgumvBqtWvFhyIPdgmvcxGKHWiM=",
+      "price": "170"
+    },
+    {
+      "id": "81",
+      "title": "Fried Mozzarella Burger",
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/b4405282979087.Y3JvcCw3OTIsNjE5LDI5NCwxMzc.jpg",
+      "price": "170"
+    },
+    {
+      "id": "82",
+      "title": "Keto Cheese Burger",
+      "image": "https://www.hola.ae/wp-content/uploads/2022/07/Cheese-Burger-Healthy-Options-by-L-hOLa-Dubai-Abu-Dhabi-Sharjah-Fujairah-Ajman-Al-Ain-UAE.jpg",
+      "price": "150"
+    },
+    {
+      "id": "83",
+      "title": "Keto Mushroom Burger",
+      "image": "https://png.pngtree.com/png-vector/20240310/ourmid/pngtree-tasty-mushroom-burger-png-image_11921721.png",
+      "price": "160"
+    },
+    {
+      "id": "84",
+      "title": "Double Burger",
+      "image": "https://buona.com/wp-content/uploads/2021/05/burgers_dogs_double.jpg",
+      "price": "200"
+    },
+    {
+      "id": "85",
+      "title": "Double Cheese Burger",
+      "image": "https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-double-cheeseburger-april-promo:nutrition-calculator-tile?wid=822&hei=822&dpr=off",
+      "price": "210"
+    },
+    {
+      "id": "86",
+      "title": "Double Mushroom Burger",
+      "image": "https://smashburger.com/cdn-cgi/image/format=auto,width=1920,quality=75/https://olo-images-live.imgix.net/5f/5f0e089b64b84b9190a4ea52af34d3dd.png?auto=format%2Ccompress&q=60&cs=tinysrgb&w=1200&h=800&fit=fill&fm=png32&bg=transparent&s=235cfa2904bbabf03edf0365b7749ced",
+      "price": "220"
     }
   ]
 }

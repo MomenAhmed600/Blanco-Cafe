@@ -5,9 +5,9 @@ import { FaRegCopyright } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-[#FFF] to-[#d2cc76] text-white mt-10 shadow-[0_-3px_10px_rgb(0,0,0,0.2)]">
+    <footer className="bg-gradient-to-r from-[#FFF] to-[#d2cc76] text-white shadow-[0_-3px_10px_rgb(0,0,0,0.2)]">
       <motion.div
-        className="mt-10"
+        className=""
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
@@ -17,9 +17,10 @@ const Footer = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        {/* Main Footer */}
-        <div className="max-w-7xl mx-auto px-5 py-16 grid grid-cols-2 md:grid-cols-4  gap-10">
-          {/* Section 1 */}
+        {/* Main Footer Content */}
+        {/* تم تغيير py-16 إلى pt-4 و pb-16 لتقليل الفراغ العلوي */}
+        <div className="max-w-7xl mx-auto px-5 pt-4 pb-16 grid grid-cols-2 md:grid-cols-4 gap-10">
+          {/* Section 1: Brand */}
           <div className="ft-1">
             <div className="flex items-center gap-2">
               <img src="/logo-2.png" alt="logo" className="w-8 h-8" />
@@ -30,20 +31,12 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Section 2 */}
+          {/* Section 2: Links */}
           <div className="ft-2">
             <h5 className="text-xl font-semibold mb-4 text-black">
               Quick Links
             </h5>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="/about"
-                  className="hover:text-[#fff] transition text-black"
-                >
-                  About Us
-                </a>
-              </li>
               <li>
                 <a
                   href="/menu"
@@ -54,16 +47,16 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/products"
+                  href="/about"
                   className="hover:text-[#fff] transition text-black"
                 >
-                  Products
+                  About Us
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Section 3 */}
+          {/* Section 3: Social */}
           <div className="ft-3">
             <h5 className="text-xl font-semibold mb-4 text-black">Follow Us</h5>
             <ul className="space-y-2">
@@ -78,7 +71,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/blancocafeandplaystation"
+                  href="https://www.instagram.com/blancocafeandplaystion/"
                   target="blank"
                   className="flex items-center gap-2 hover:text-pink-500 transition text-black"
                 >
@@ -96,7 +89,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          {/* Section 4 */}
+
+          {/* Section 4: Location */}
           <div className="ft-4">
             <h5 className="text-xl font-semibold mb-4 text-black">
               ALEXANDRIA
@@ -111,10 +105,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="bg-black text-center py-4 text-gray-400 text-sm">
+        {/* Bottom Bar */}
+        <div className="bg-black text-center py-4 text-white text-sm">
           <p className="flex items-center justify-center gap-2">
-            <FaRegCopyright /> Copy Right 2026 - All Reserved
+            <FaRegCopyright /> Copy Right 2026 - All Reserved By Mo'men Ahmed
           </p>
         </div>
       </motion.div>

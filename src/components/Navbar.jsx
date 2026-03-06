@@ -1,21 +1,22 @@
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
-import { BsSearch } from "react-icons/bs"; // ضفنا دي
+import { BsSearch } from "react-icons/bs";
 import Button from "./layouts/Button";
 import { useSearch } from "../context/SearchContext";
+
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const { setSearch } = useSearch();
+  const navigateToSearch = useNavigate();
+  const location = useLocation();
 
   const handleChangeMe = () => setMenu(!menu);
   const closeMenu = () => setMenu(false);
 
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
-  };
+  const handleChange = (e) => setInputValue(e.target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,14 +25,18 @@ const Navbar = () => {
   };
 
   const handleSearchClose = () => setShowSearch(false);
-  const handleSearchShow = () => setShowSearch(true);
+
+  const handleSearchShow = () => {
+    setShowSearch(true);
+    const currentPath = location.pathname;
+    if (!currentPath.startsWith("/menu")) {
+      navigateToSearch("/menu");
+    }
+  };
 
   return (
     <>
-      {" "}
-      {/* بداية الـ Fragment عشان نجمع الـ Navbar والـ Modal */}
       <div className="w-full z-50 relative">
-        {/* Navbar container */}
         <div className="flex justify-between items-center p-5 lg:px-32 bg-gradient-to-r from-[#FFF] to-[#d2cc76] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
           {/* Logo */}
           <RouterLink to="/">
@@ -46,18 +51,16 @@ const Navbar = () => {
             <RouterLink to="/" className="hover:text-white text-black">
               Home
             </RouterLink>
+
             <RouterLink to="/menu" className="hover:text-white text-black">
               Menu
-            </RouterLink>
-            <RouterLink to="/products" className="hover:text-white text-black">
-              Products
             </RouterLink>
             <RouterLink to="/about" className="hover:text-white text-black">
               About Us
             </RouterLink>
           </nav>
 
-          {/* Desktop Contact */}
+          {/* Search Button Desktop */}
           <div className="hidden lg:flex gap-5">
             <button
               onClick={handleSearchShow}
@@ -65,7 +68,9 @@ const Navbar = () => {
             >
               <BsSearch size={20} />
             </button>
-            <Button title="Contact Us" />
+            <a href="tel:+2015 51589296" className="inline-block w-full">
+              <Button title="Contact Us" />
+            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -95,27 +100,22 @@ const Navbar = () => {
             <RouterLink to="/menu" onClick={closeMenu}>
               Menu
             </RouterLink>
-            <RouterLink to="/products" onClick={closeMenu}>
-              Products
-            </RouterLink>
             <RouterLink to="/about" onClick={closeMenu}>
               About Us
             </RouterLink>
-
-            {/* تصليح زرار البحث في الموبايل */}
-            <div
-              className="self-center cursor-pointer"
-              onClick={() => {
-                handleSearchShow();
-                closeMenu();
-              }}
-            >
-              <BsSearch size={25} />
+            <div className="flex flex-col gap-5 items-center">
+              <a
+                href="tel:+2015 51589296"
+                className="w-full flex items-center justify-center"
+              >
+                <Button title="Contact Us" />
+              </a>
             </div>
           </div>
         )}
       </div>
-      {/* Modal - Tailwind Version */}
+
+      {/* Modal - Search */}
       {showSearch && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center">
           <div
@@ -133,11 +133,12 @@ const Navbar = () => {
               <div className="p-6 bg-gray-100">
                 <form onSubmit={handleSubmit}>
                   <input
+                    autoFocus
                     type="text"
-                    placeholder="Search Item"
+                    placeholder="What are you looking for?"
                     value={inputValue}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-black"
+                    className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-[#d2cc76] outline-none text-black"
                   />
                   <div className="flex justify-end gap-2 mt-6">
                     <button
@@ -146,13 +147,13 @@ const Navbar = () => {
                         setInputValue("");
                         setSearch("");
                       }}
-                      className="px-4 py-2 bg-[#d2cc76] rounded-md text-black"
+                      className="px-4 py-2 rounded-md bg-black text-white"
                     >
                       Clear
                     </button>
                     <button
                       type="submit"
-                      className="px-6 py-2 bg-black text-white rounded-md"
+                      className="px-6 py-2 text-black bg-[#d2cc76] rounded-md font-medium"
                     >
                       Search
                     </button>

@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -50,20 +51,20 @@ body {
 /* Scrollbar buttons container */
 .scrollbar-buttons {
   scrollbar-width: thin; 
-  scrollbar-color: #000 #e5e7eb; /* thumb color / track color */
+  scrollbar-color: #000 #e5e7eb;
 }
 
 .scrollbar-buttons::-webkit-scrollbar {
-  height: 8px; /* horizontal scrollbar height */
+  height: 8px; 
 }
 
 .scrollbar-buttons::-webkit-scrollbar-track {
-  background: #e5e7eb; /* track color */
+  background: #e5e7eb;
   border-radius: 999px;
 }
 
 .scrollbar-buttons::-webkit-scrollbar-thumb {
-  background-color: #000; /* scrollbar color */
+  background-color: #000;
   border-radius: 999px;
 }
 
@@ -71,3 +72,11 @@ body {
   background-color: #111;
 }
 
+
+/* .swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+}
+.swiper-pagination-bullet-active {
+  background: #d2cc76 !important;
+} */

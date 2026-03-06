@@ -5,8 +5,6 @@ import Footer from "./components/Footer";
 import { lazy, Suspense } from "react";
 const Menu = lazy(() => import("./components/Menu"));
 const Home = lazy(() => import("./components/Home"));
-const Products = lazy(() => import("./components/Products"));
-import { SyncLoader } from "react-spinners";
 import { SearchProvider } from "./context/SearchContext";
 const App = () => {
   return (
@@ -17,7 +15,11 @@ const App = () => {
           <Suspense
             fallback={
               <div className="flex justify-center items-center min-h-[60vh]">
-                <SyncLoader color="#000000" size={15} margin={5} />
+                <img
+                  src="/logo-2.png"
+                  alt="logo"
+                  className="w-20 h-20 mr-3 animate-spin"
+                />
               </div>
             }
           >
@@ -25,7 +27,6 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/menu/:type?" element={<Menu />} />
               <Route path="/about" element={<About />} />
-              <Route path="/products" element={<Products />} />
             </Routes>
           </Suspense>
         </main>

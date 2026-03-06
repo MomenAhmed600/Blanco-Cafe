@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import img from "../assets/img/home.png";
 import BestSellerCard from "./layouts/BestSellerCard";
-import BestSellerProducts from "./layouts/BestSellerProducts";
 import ButtonBestSeller from "./layouts/Button-Best-Seller";
+import CarouselCom from "./layouts/CarouselCom";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -72,11 +72,11 @@ const Home = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h1 className="flex content-center justify-center font-semibold text-5xl">
+        <h1 className="flex content-center justify-center  font-serif  text-5xl">
           NEW-<span className="text-red-600">SALE</span>
         </h1>
 
-        <p className="flex content-center justify-center mt-5 font-semibold text-lg">
+        <p className="mt-5 font-mono text-lg text-center px-4 flex justify-center items-center">
           Your Favorite Pairings, Now at Exclusive Prices for a Limited Time.
         </p>
 
@@ -87,7 +87,7 @@ const Home = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, x: 50 },
+            hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
         >
@@ -121,7 +121,7 @@ const Home = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ delay: 0.4, duration: 0.5 }}
         variants={{
-          hidden: { opacity: 0, x: -50 },
+          hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
         }}
       >
@@ -135,23 +135,23 @@ const Home = () => {
 
       {/* Our Products */}
       <motion.div
-        className="py-5 lg:py-16 justify-center lg:flex-row lg:justify-center items-center lg:px-32 px-5 gap-10 bg-white mt-10"
+        className=" py-10 lg:py-16 justify-center lg:flex-row lg:justify-center items-center lg:px-32 px-5 gap-10 text-neutral-950 mt-3"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         variants={{
-          hidden: { opacity: 0, x: 50 },
+          hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h1 className="flex content-center justify-center font-semibold text-5xl">
-          Our Products
+        <h1 className="text-center  font-serif text-5xl  bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
+          Your Private Gaming Corner
         </h1>
 
-        <p className="flex content-center justify-center mt-5 font-semibold text-lg">
-          Discover Our Premium Coffee Baskets, Carefully Curated for True Coffee
-          Lovers.
+        <p className="mt-5 font-mono text-lg text-center px-4 flex justify-center items-center">
+          Discover our curated selection of specialty coffee and high-end gaming
+          setups, all in one place.
         </p>
 
         <motion.div
@@ -165,27 +165,7 @@ const Home = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div
-            className="grid
-            grid-cols-1
-            sm:grid-cols-3
-            gap-6
-            px-4"
-          >
-            {bestProducts.map((productsel) => {
-              return (
-                <BestSellerProducts
-                  key={productsel.id}
-                  img={productsel.image}
-                  title={productsel.title}
-                  description={productsel.description}
-                />
-              );
-            })}
-          </div>
-          <div className="flex flex-row gap-6 items-center justify-center mt-10">
-            <ButtonBestSeller title="MORE MENU" onClick={navigateProducts} />
-          </div>
+          <CarouselCom />
         </motion.div>
       </motion.div>
     </>

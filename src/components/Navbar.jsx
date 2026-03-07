@@ -1,5 +1,5 @@
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
 import Button from "./layouts/Button";
@@ -33,6 +33,13 @@ const Navbar = () => {
       navigateToSearch("/menu");
     }
   };
+
+  useEffect(() => {
+    if (!location.pathname.startsWith("/menu")) {
+      setSearch("");
+      setInputValue("");
+    }
+  }, [location.pathname, setSearch]);
 
   return (
     <>

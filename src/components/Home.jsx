@@ -126,7 +126,7 @@ const Home = () => {
         }}
       >
         <img
-          src="/img/front-photos.png"
+          src="/img/front-photos.jpg"
           alt="front-img"
           loading="lazy"
           className="w-full md:h-96  object-cover"

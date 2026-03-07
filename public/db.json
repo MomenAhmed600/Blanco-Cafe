@@ -47,7 +47,7 @@
       "id": "1ssa1",
       "title": "ANY DESSERT + ANY HOT DRINK",
       "description": "Pair your favorite drink with a sweet treat.",
-      "image": "/img/hot-drink&dessert.png",
+      "image": "https://i.ibb.co/4RzBCLJy/hot-drink-dessert.png",
       "price": "140"
     },
     {
@@ -83,35 +83,35 @@
     {
       "id": "18",
       "title": "Turkish Coffee",
-      "image": "https://rozalinarestaurant.ae/cdn/shop/products/special-turkish-coffee-set-contains-6-d524.jpg?v=1644828991",
+      "image": "/img/turkish-coffee/Turkish Coffee.png",
       "price": "38"
     },
     {
       "id": "19",
       "title": "Double Turkish Coffee",
       "description": "Medium or Dark Roast",
-      "image": "https://www.nescafe.com/gb/sites/default/files/2023-11/Untitled-5%20copy_7.jpg",
+      "image": "/img/turkish-coffee/Double Turkish Coffee.png",
       "price": "48"
     },
     {
       "id": "20",
       "title": "Nutella Coffee",
       "description": "Medium Roast",
-      "image": "https://rozalinarestaurant.ae/cdn/shop/products/special-turkish-coffee-set-contains-6-d524.jpg?v=1644828991",
+      "image": "/img/turkish-coffee/Nutella Coffee.png",
       "price": "69"
     },
     {
       "id": "21",
       "title": "French Coffee",
       "description": "Medium Roast",
-      "image": "https://www.nescafe.com/gb/sites/default/files/2023-11/Untitled-5%20copy_7.jpg",
+      "image": "/img/turkish-coffee/French Coffee.png",
       "price": "52"
     },
     {
       "id": "22",
       "title": "Hazelnut Coffee",
       "description": "Medium Roast",
-      "image": "https://www.nescafe.com/gb/sites/default/files/2023-11/Untitled-5%20copy_7.jpg",
+      "image": "/img/turkish-coffee/Hazelnut Coffee.png",
       "price": "72"
     }
   ],
@@ -119,73 +119,73 @@
     {
       "id": "23",
       "title": "ESPRESSO",
-      "image": "https://www.sharmispassions.com/wp-content/uploads/2012/07/espresso-coffee-recipe04-500x500.jpg",
+      "image": "/img/espresso/ESPRESSO.png",
       "price": "55"
     },
     {
       "id": "24",
       "title": "Double Espresso",
-      "image": "https://coffeegeek.com/wp-content/uploads/2019/09/espressohowto-11.jpg",
+      "image": "/img/espresso/Double Espresso.png",
       "price": "60"
     },
     {
       "id": "25",
       "title": "Espresso Avocado",
-      "image": "https://media01.stockfood.com/largepreviews/NDE2NDQyMDM0/13433614-Geschichteter-Avocado-Creme-Espresso.jpg",
+      "image": "/img/espresso/Espresso Avocado.png",
       "price": "69"
     },
     {
       "id": "26",
       "title": "Cappuccino",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVt__A8bvTk9UbAp6N28awtRlQjJxssNuLA&s",
+      "image": "/img/espresso/Cappuccino.png",
       "price": "75"
     },
     {
       "id": "27",
       "title": "Latte",
-      "image": "https://www.brighteyedbaker.com/wp-content/uploads/2024/07/Dulce-de-Leche-Latte-Recipe.jpg",
+      "image": "/img/espresso/Latte.png",
       "price": "77"
     },
     {
       "id": "28",
       "title": "Spanish Latte",
-      "image": "https://slojo.co.za/wp-content/uploads/2025/05/NEW_DRINK-Website-resize_630x870px_coffee-over-ice.png",
+      "image": "/img/espresso/Spanish Latte.png",
       "price": "95"
     },
     {
       "id": "29",
       "title": "Mocha",
-      "image": "https://athome.starbucks.com/sites/default/files/styles/recipe_banner_xlarge/public/2024-05/CaffeMocha_RecipeHeader_848x539_%402x.jpg.webp?itok=ov3gQo8W",
+      "image": "/img/espresso/Mocha.png",
       "price": "77"
     },
     {
       "id": "30",
       "title": "Macchiato",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BUhLFQod_-Sy8gNY_AomaugSocYQYnYyNA&s",
+      "image": "/img/espresso/Macchiato.png",
       "price": "67"
     },
     {
       "id": "31",
       "title": "Double Macchiato",
-      "image": "https://www.starbucks.com.hk/media/catalog/product/1/c/1cb9e666-d326-4c13-b1a1-562ea374a525_1_2.jpg",
+      "image": "/img/espresso/Double Macchiato.png",
       "price": "77"
     },
     {
       "id": "32",
       "title": "Corto",
-      "image": "https://media-cdn.tripadvisor.com/media/photo-s/0f/91/4c/15/classic-corto.jpg",
+      "image": "/img/espresso/Corto.png",
       "price": "72"
     },
     {
       "id": "33",
       "title": "Flat White",
-      "image": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2014/3/7/1394188793056/Flat-White-Coffee--012.jpg?width=465&dpr=1&s=none&crop=none",
+      "image": "/img/espresso/Flat White.png",
       "price": "85"
     },
     {
       "id": "34",
       "title": "American Coffee",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSan5-ghzEHeYJ6aP7NRgjBHE6q7kdubkspvg&s",
+      "image": "/img/espresso/American Coffee.png",
       "price": "80"
     }
   ],
@@ -193,91 +193,91 @@
     {
       "id": "35",
       "title": "Nescafe",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ASmMAsmFLoYTAofDFMCy-ykfU405tBBzIA&s",
+      "image": "/img/hot-drinks/Nescafe.png",
       "price": "74"
     },
     {
       "id": "36",
       "title": "Hot Cider",
-      "image": "https://www.thecountrycook.net/wp-content/uploads/2021/10/thumbnail-Homemade-Apple-Cider.jpg",
+      "image": "/img/hot-drinks/Hot Cider.png",
       "price": "52"
     },
     {
       "id": "37",
       "title": "Hot Chocolate",
-      "image": "https://www.foodandwine.com/thmb/VSSakyBhpjt2NWTKQUAU05eb2xM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Spiked-Peanut-Butter-Hot-Chocolate-FT-MAG-RECIPE-0225-b72b3e0d1545494aa9702eff42669656.jpg",
+      "image": "/img/hot-drinks/Hot Chocolat.png",
       "price": "73"
     },
     {
       "id": "38",
       "title": "Hot Herps",
-      "image": "https://www.wisdomlib.org/uploads/recipes/1024x768_crop/hot-drink-10486.jpg",
+      "image": "/img/hot-drinks/Hot Herps.png",
       "price": "47"
     },
     {
       "id": "39",
       "title": "Vitamin C",
-      "image": "https://www.vindulge.com/wp-content/uploads/2021/09/Bourbon-Spiked-Hot-Apple-Cider-glass.jpg",
+      "image": "/img/hot-drinks/Vitamin C.png",
       "price": "57"
     },
     {
       "id": "40",
       "title": "Sahlab",
-      "image": "https://static.wixstatic.com/media/059721_7db39f448c944505be0e171ab00584a1~mv2.jpg/v1/fill/w_568,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/059721_7db39f448c944505be0e171ab00584a1~mv2.jpg",
+      "image": "/img/hot-drinks/Sahlab.png",
       "price": "77"
     },
     {
       "id": "41",
       "title": "Tea",
-      "image": "https://www.aicr.org/wp-content/uploads/2020/06/peppermint-tea-on-teacup-1417945.jpg",
+      "image": "/img/hot-drinks/Tea.png",
       "price": "32"
     },
     {
       "id": "42",
       "title": "Brad Tea",
-      "image": "https://www.sattvicfoods.in/cdn/shop/articles/oolong-green-tea-teapot-bowl_3_520x500_436ff780-707f-4ee0-ae1c-0c951ea619f0.jpg?v=1736510346",
+      "image": "/img/hot-drinks/Brad Tea.png",
       "price": "45"
     },
     {
       "id": "43",
       "title": "Tea With Milk",
-      "image": "https://images.getrecipekit.com/20230704115527-gyokuro-20milk-20tea-20recipe.jpg?class=16x9",
+      "image": "/img/hot-drinks/Tea With Milk.png",
       "price": "55"
     },
     {
       "id": "44",
       "title": "Brad Tea With Milk",
-      "image": "https://www.basilurtea.com.au/cdn/shop/articles/1_a9460d73-12d3-450a-b502-fb3d0bcdf05b.webp?v=1731419611",
+      "image": "/img/hot-drinks/Brad Tea With Milk.png",
       "price": "60"
     },
     {
       "id": "45",
       "title": "Matcha",
-      "image": "https://greenutshealthyfood.com/cdn/shop/files/WhatsAppImage2024-03-25at2.04.34PM_1.jpg?v=1711396942&width=1024",
+      "image": "/img/hot-drinks/Matcha.png",
       "price": "95"
     },
     {
       "id": "46",
       "title": "Tea Flavors",
-      "image": "https://bradleys-tea.co.uk/wp-content/uploads/Axxent-93-scaled-e1758524448301.jpg",
+      "image": "/img/hot-drinks/Tea Flavors.png",
       "price": "45"
     },
     {
       "id": "47",
       "title": "Brad Tea Flavors",
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/81fZqJsOfBL._AC_UL495_SR435,495_.jpg",
+      "image": "/img/hot-drinks/Brad Tea Flavors.png",
       "price": "50"
     },
     {
       "id": "48",
       "title": "Tea Flavors With Milk",
-      "image": "https://www.basilurtea.com.au/cdn/shop/articles/1_a9460d73-12d3-450a-b502-fb3d0bcdf05b.webp?v=1731419611",
+      "image": "/img/hot-drinks/Tea Flavors With Milk.png",
       "price": "65"
     },
     {
       "id": "49",
       "title": "Brad Tea Flavors With Milk",
-      "image": "https://www.basilurtea.com.au/cdn/shop/articles/1_a9460d73-12d3-450a-b502-fb3d0bcdf05b.webp?v=1731419611",
+      "image": "/img/hot-drinks/Brad Tea Flavors With Milk.png",
       "price": "70"
     }
   ],
@@ -438,28 +438,28 @@
     {
       "id": "72",
       "title": "Poutine Burger",
-      "image": "/img/Poutine Burger.png",
+      "image": "/img/Poutine Burger.jpg",
       "price": "190"
     },
     {
       "id": "73",
       "title": "Poutine Grilled Chicken",
       "description": "Medium or Dark Roast",
-      "image": "/img/Poutine Grilled Chicken.PNG",
+      "image": "/img/Poutine Grilled Chicken.png",
       "price": "195"
     },
     {
       "id": "74",
       "title": "Poutine Crispy",
       "description": "Medium Roast",
-      "image": "/img/Poutine Crispy.PNG",
+      "image": "/img/Poutine Crispy.png",
       "price": "185"
     },
     {
       "id": "75",
       "title": "Poutine Jalapeno",
       "description": "Medium Roast",
-      "image": "/img/Poutine Jalapeno.PNG",
+      "image": "/img/Poutine Jalapeno.png",
       "price": "180"
     }
   ],
@@ -467,67 +467,67 @@
     {
       "id": "76",
       "title": "Classic Burger",
-      "image": "https://mymarios.com/pystedod/2020/04/Classic-Burger-MARIOSBurgers-MJ6280-25.7.2020-online.png",
+      "image": "/img/burgers/Cheese Burgerr.png",
       "price": "150"
     },
     {
       "id": "77",
       "title": "Cheese Burger",
-      "image": "https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg",
+      "image": "/img/burgers/Cheese Burger.png",
       "price": "160"
     },
     {
       "id": "78",
       "title": "BBQ Burger",
-      "image": "https://dudethatcookz.com/wp-content/uploads/2020/04/Double_BBQ_Cheddar_Burger14_Hero.jpg",
+      "image": "/img/burgers/BBQ Burger.png",
       "price": "160"
     },
     {
       "id": "79",
       "title": "Ranch Burger",
-      "image": "https://jamjarkitchen.com/wp-content/uploads/2021/08/DSC_0584.jpg",
+      "image": "/img/burgers/Ranch Burger.png",
       "price": "160"
     },
     {
       "id": "80",
       "title": "Mushroom Burger",
-      "image": "https://media.istockphoto.com/id/539659420/photo/mushroom-swiss-burger.jpg?s=612x612&w=0&k=20&c=jMNa1F6VJmUGvDafmgumvBqtWvFhyIPdgmvcxGKHWiM=",
+      "image": "/img/burgers/Mushroom Burger.png",
       "price": "170"
     },
     {
       "id": "81",
       "title": "Fried Mozzarella Burger",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/b4405282979087.Y3JvcCw3OTIsNjE5LDI5NCwxMzc.jpg",
+      "image": "/img/burgers/Fried Mozzarella Burger.png",
       "price": "170"
     },
     {
       "id": "82",
       "title": "Keto Cheese Burger",
-      "image": "https://www.hola.ae/wp-content/uploads/2022/07/Cheese-Burger-Healthy-Options-by-L-hOLa-Dubai-Abu-Dhabi-Sharjah-Fujairah-Ajman-Al-Ain-UAE.jpg",
+      "image": "/img/burgers/Keto Cheese Burger.png",
       "price": "150"
     },
     {
       "id": "83",
       "title": "Keto Mushroom Burger",
-      "image": "https://png.pngtree.com/png-vector/20240310/ourmid/pngtree-tasty-mushroom-burger-png-image_11921721.png",
+      "image": "/img/burgers/Keto Mushroom Burger.png",
       "price": "160"
     },
     {
       "id": "84",
       "title": "Double Burger",
-      "image": "https://buona.com/wp-content/uploads/2021/05/burgers_dogs_double.jpg",
+      "image": "/img/burgers/Double Burger.png",
       "price": "200"
     },
     {
       "id": "85",
       "title": "Double Cheese Burger",
-      "image": "https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-double-cheeseburger-april-promo:nutrition-calculator-tile?wid=822&hei=822&dpr=off",
+      "image": "/img/burgers/Double Cheese Burger.png",
       "price": "210"
     },
     {
       "id": "86",
       "title": "Double Mushroom Burger",
-      "image": "https://smashburger.com/cdn-cgi/image/format=auto,width=1920,quality=75/https://olo-images-live.imgix.net/5f/5f0e089b64b84b9190a4ea52af34d3dd.png?auto=format%2Ccompress&q=60&cs=tinysrgb&w=1200&h=800&fit=fill&fm=png32&bg=transparent&s=235cfa2904bbabf03edf0365b7749ced",
+      "image": "/img/burgers/Double Mushroom Burger.png",
       "price": "220"
     }
   ]

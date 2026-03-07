@@ -20,7 +20,7 @@ const CarouselCom = () => {
       desc: "Level up your gaming experience in our fully equipped private rooms.",
     },
     {
-      img: "/img/room-birth.png",
+      img: "/img/room-birth.jpg",
       title: "Celebrate Your Special Day",
       desc: "Level up your birthday in our exclusive private lounge.",
     },

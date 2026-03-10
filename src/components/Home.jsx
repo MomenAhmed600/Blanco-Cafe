@@ -64,7 +64,7 @@ const Home = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         variants={{
-          hidden: { opacity: 0, x: 50 },
+          hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}
       >
@@ -117,7 +117,7 @@ const Home = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ delay: 0.4, duration: 0.5 }}
         variants={{
-          hidden: { opacity: 0, x: 50 },
+          hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}
       >
@@ -129,7 +129,7 @@ const Home = () => {
         />
       </motion.div>
 
-      {/* Our Products */}
+      {/* Room & playstation */}
       <motion.div
         className=" py-10 lg:py-16 justify-center lg:flex-row lg:justify-center items-center lg:px-32 px-5 gap-10 text-neutral-950 mt-3"
         initial="hidden"
@@ -157,7 +157,7 @@ const Home = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, x: 50 },
+            hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
         >

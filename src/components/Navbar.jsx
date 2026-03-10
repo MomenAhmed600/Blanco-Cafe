@@ -135,7 +135,6 @@ const Navbar = () => {
               `}
             />
 
-            {/* زرار الـ Clear (X) يظهر فقط عند وجود نص */}
             {showSearch && inputValue !== "" && (
               <button
                 onClick={clearSearch}
@@ -191,6 +190,7 @@ const Navbar = () => {
           <a
             href="tel:+2015 51589296"
             className="w-full flex items-center justify-center"
+            onClick={closeMenu}
           >
             <Button title="Contact Us" />
           </a>

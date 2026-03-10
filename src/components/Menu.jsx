@@ -135,7 +135,6 @@ const Menu = () => {
       }}
     >
       <div className="flex flex-col gap-6 items-center px-4">
-        {/* 1. Category Container - يختفي عند البحث */}
         {!search && (
           <div className="w-full relative max-w-6xl mx-auto md:mb-8 sm:mb-5">
             <button
@@ -239,7 +238,6 @@ const Menu = () => {
             </div>
           )}
 
-          {/* 3. Addons - تختفي عند البحث */}
           {!search && (
             <>
               <Addons items={addonsItems} />

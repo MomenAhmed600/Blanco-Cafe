@@ -19,6 +19,7 @@ const Navbar = () => {
   const handleChangeMe = () => setMenu(!menu);
   const closeMenu = () => setMenu(false);
 
+  // فانكشن البحث مع الـ Debouncing
   const handleChange = (e) => {
     const val = e.target.value;
     setInputValue(val);
@@ -30,13 +31,11 @@ const Navbar = () => {
     timeoutRef.current = setTimeout(() => {
       if (val === "") {
         setSearch("");
-
         if (location.pathname.startsWith("/menu")) {
           navigateToSearch("/menu");
         }
       } else {
         setSearch(val);
-
         if (!location.pathname.startsWith("/menu")) {
           navigateToSearch("/menu");
         }
@@ -44,10 +43,19 @@ const Navbar = () => {
     }, 300);
   };
 
+  // فانكشن مسح البحث (Clear Search)
+  const clearSearch = () => {
+    setInputValue("");
+    setSearch("");
+    if (location.pathname.startsWith("/menu")) {
+      navigateToSearch("/menu");
+    }
+    inputRef.current?.focus(); // يرجع الـ Focus للـ Input بعد المسح
+  };
+
   const toggleSearch = () => {
     if (!showSearch) {
       setShowSearch(true);
-
       if (!location.pathname.startsWith("/menu")) {
         navigateToSearch("/menu");
       }
@@ -126,6 +134,18 @@ const Navbar = () => {
                 ${showSearch ? "w-[150px] md:w-[200px] px-4 py-1.5 opacity-100" : "w-0 opacity-0 p-0 border-none"}
               `}
             />
+
+            {/* زرار الـ Clear (X) يظهر فقط عند وجود نص */}
+            {showSearch && inputValue !== "" && (
+              <button
+                onClick={clearSearch}
+                className="absolute right-12 text-gray-500 hover:text-red-500 transition-colors"
+                title="Clear search"
+              >
+                <AiOutlineClose size={16} />
+              </button>
+            )}
+
             <button
               onClick={toggleSearch}
               className="ml-2 hover:text-white transition-colors p-1"
@@ -144,7 +164,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Toggle */}
           <div className="lg:hidden flex items-center">
             <button onClick={handleChangeMe}>
               {menu ? (

@@ -112,7 +112,7 @@ const About = () => {
             <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-2xl relative bg-black">
               {/* عرض الـ Loading لحد ما الفيديو يجهز (نفس فكرة مشروعك القديم) */}
               {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center text-white bg-gray-800 z-10 font-bold">
+                <div className="absolute inset-0 flex items-center justify-center text-white bg-gray-300 z-10 font-bold">
                   LOADING VIDEO ...
                 </div>
               )}

@@ -9,9 +9,8 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const About = () => {
   const videoRef = useRef(null);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [listvideo, setListvideo] = useState([]); // لتخزين الفيديو من الـ JSON
+  const [isLoading, setIsLoading] = useState(true); // لضمان عدم ظهور الفيديو مشوه في الأيفون
 
   const [formData, setFormData] = useState({
     name: "",
@@ -22,6 +21,31 @@ const About = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+
+  // 1. Fetch data from db.json
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    fetch("/db.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setListvideo(data["video-about"] || []);
+      })
+      .catch((error) => {
+        console.error("Error fetching db.json:", error);
+      });
+  }, []);
+
+  // 2. محاولة التشغيل يدوياً بعد ما الـ loading يخلص (مهم جداً للأيفون)
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    if (videoEl && !isLoading) {
+      videoEl.muted = true;
+      videoEl.play().catch((err) => {
+        console.log("Autoplay is disabled", err);
+      });
+    }
+  }, [isLoading]);
 
   const handleChange = (e) => {
     setFormData({
@@ -38,10 +62,10 @@ const About = () => {
 
     emailjs
       .send(
-        "service", //{/* Service ID */}
-        "template", //{/* Template ID */}
+        "service", // Service ID
+        "template", // Template ID
         formData,
-        "", //{/* Public Key */}
+        "", // Public Key
       )
       .then(() => {
         setSuccess("Message sent successfully ");
@@ -65,27 +89,6 @@ const About = () => {
 
   const alexPos = [31.210863895166653, 29.93937014135554];
 
-  // useEffect(() => {
-  //   const isDesktop = window.innerWidth > 768;
-  //   const videoEl = videoRef.current;
-
-  //   if (videoEl && isDesktop) {
-  //     videoEl.play().catch((err) => {
-  //       console.log("Autoplay off", err);
-  //     });
-  //   }
-  // }, []);
-
-  useEffect(() => {
-    const videoEl = videoRef.current;
-    if (videoEl) {
-      videoEl.muted = true;
-      videoEl.play().catch((err) => {
-        console.log("Autoplay is disabled", err);
-      });
-    }
-  }, []);
-
   return (
     <>
       <section className="bg-gray-100 text-black py-16 px-6 md:px-12 lg:px-24">
@@ -105,23 +108,30 @@ const About = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* section-img */}
-            <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-2xl">
-              {/* <img
-                className="w-full h-full object-cover"
-                src="/img/video-photo.png"
-                alt="Video Photo"
-              /> */}
-              <video
-                ref={videoRef}
-                loop
-                muted
-                autoPlay
-                playsInline
-                webkit-playsinline="true"
-                className="w-full h-full object-cover"
-                src="/img/video-about.mp4"
-              />
+            {/* section-video container */}
+            <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-2xl relative bg-black">
+              {/* عرض الـ Loading لحد ما الفيديو يجهز (نفس فكرة مشروعك القديم) */}
+              {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center text-white bg-gray-800 z-10 font-bold">
+                  LOADING VIDEO ...
+                </div>
+              )}
+
+              {listvideo.map((item) => (
+                <video
+                  key={item.id}
+                  ref={videoRef}
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                  webkit-playsinline="true"
+                  className="w-full h-full object-cover"
+                  src={item.video}
+                  onLoadedData={() => setIsLoading(false)} // بيغير الـ state لما الداتا تحمل
+                  style={{ display: isLoading ? "none" : "block" }} // بيمنع الـ glitch في الأيفون
+                />
+              ))}
             </div>
 
             {/* section-text */}
@@ -149,6 +159,7 @@ const About = () => {
         </motion.div>
       </section>
 
+      {/* Section Location & Form */}
       <section
         id="smouha-location"
         className="bg-gray-900 text-black pt-12 pb-0 px-6 md:px-12 lg:px-24 w-full"
@@ -164,14 +175,12 @@ const About = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          {/* section-map */}
           <div className="h-[450px] w-full rounded-2xl shadow-lg border-2 border-blue-100 overflow-hidden relative z-0">
             <MapContainer center={alexPos} zoom={12} className="h-full w-full">
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-
               <Marker position={alexPos}>
                 <Popup>
                   <div className="text-center font-sans">
@@ -183,7 +192,6 @@ const About = () => {
             </MapContainer>
           </div>
 
-          {/* section-form */}
           <div className="space-y-6">
             <h2 className="text-center text-4xl font-bold mb-12 uppercase tracking-widest text-white">
               Reviews
@@ -198,7 +206,6 @@ const About = () => {
                 required
                 className="w-full border p-2 rounded"
               />
-
               <input
                 type="email"
                 name="email"
@@ -208,7 +215,6 @@ const About = () => {
                 required
                 className="w-full border p-2 rounded"
               />
-
               <textarea
                 name="message"
                 placeholder="Your Message"
@@ -217,7 +223,6 @@ const About = () => {
                 required
                 className="w-full border p-2 rounded h-32"
               />
-
               <button
                 type="submit"
                 disabled={loading}
@@ -225,7 +230,6 @@ const About = () => {
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
-
               {success && <p className="text-green-600">{success}</p>}
               {error && <p className="text-red-600">{error}</p>}
             </form>

@@ -65,13 +65,23 @@ const About = () => {
 
   const alexPos = [31.210863895166653, 29.93937014135554];
 
-  useEffect(() => {
-    const isDesktop = window.innerWidth > 768;
-    const videoEl = videoRef.current;
+  // useEffect(() => {
+  //   const isDesktop = window.innerWidth > 768;
+  //   const videoEl = videoRef.current;
 
-    if (videoEl && isDesktop) {
+  //   if (videoEl && isDesktop) {
+  //     videoEl.play().catch((err) => {
+  //       console.log("Autoplay off", err);
+  //     });
+  //   }
+  // }, []);
+
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    if (videoEl) {
+      videoEl.muted = true;
       videoEl.play().catch((err) => {
-        console.log("Autoplay off", err);
+        console.log("Autoplay is disabled", err);
       });
     }
   }, []);
@@ -106,9 +116,10 @@ const About = () => {
                 ref={videoRef}
                 loop
                 muted
-                playsInline
                 autoPlay
-                controls={window.innerWidth <= 768}
+                playsInline
+                webkit-playsinline="true"
+                className="w-full h-full object-cover"
                 src="/img/video-about.mp4"
               />
             </div>

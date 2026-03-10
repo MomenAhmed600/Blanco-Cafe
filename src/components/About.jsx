@@ -94,13 +94,14 @@ const About = () => {
             <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg shadow-2xl bg-black relative">
               {listvideo.map((item) => (
                 <video
-                  ref={videoRef}
+                  autoPlay
+                  muted
                   loop
                   playsInline
                   controls
                   className="w-full h-full object-cover"
                 >
-                  <source src={item.video} type="video/mp4" />
+                  <source src="/video-about.mp4" type="video/mp4" />
                 </video>
               ))}
             </div>

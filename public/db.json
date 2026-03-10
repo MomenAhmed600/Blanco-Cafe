@@ -507,11 +507,5 @@
       "image": "/img/burgers/Double Mushroom Burger.png",
       "price": "220"
     }
-  ],
-  "video-about": [
-    {
-      "id": "15e8",
-      "video": "/video-about.mp4"
-    }
   ]
 }

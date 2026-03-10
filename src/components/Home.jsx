@@ -8,7 +8,7 @@ import CarouselCom from "./layouts/CarouselCom";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [bestProducts, setBestProducts] = useState([]);
+
   const navigate = useNavigate();
 
   const navigateMenu = () => {
@@ -24,10 +24,6 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data["BEST-SELLER"]);
-
-        console.log(data["BEST-SELLER"]);
-        setBestProducts(data["BEST-Products"]);
-        console.log(data["BEST-Products"]);
       })
       .catch((err) => {
         console.error("Failed to fetch menu:", err);

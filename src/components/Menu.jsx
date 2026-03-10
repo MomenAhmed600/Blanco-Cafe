@@ -51,8 +51,10 @@ const Menu = () => {
     if (!search || Object.keys(allData).length === 0) return;
 
     for (const key in allData) {
+      if (!Array.isArray(allData[key])) continue;
+
       const found = allData[key].some((product) =>
-        product.title.toLowerCase().includes(search.toLowerCase()),
+        product.title?.toLowerCase().includes(search.toLowerCase()),
       );
 
       if (found) {
@@ -98,12 +100,14 @@ const Menu = () => {
 
     let results = [];
     Object.keys(allData).forEach((key) => {
-      if (key === "BEST-SELLER") return;
+      if (key === "BEST-SELLER" || key === "video-about") return;
 
-      const filtered = allData[key].filter((product) =>
-        product.title.toLowerCase().includes(searchTerm),
-      );
-      results = [...results, ...filtered];
+      if (Array.isArray(allData[key])) {
+        const filtered = allData[key].filter((product) =>
+          product.title?.toLowerCase().includes(searchTerm),
+        );
+        results = [...results, ...filtered];
+      }
     });
 
     return Array.from(new Map(results.map((item) => [item.id, item])).values());
@@ -131,100 +135,117 @@ const Menu = () => {
       }}
     >
       <div className="flex flex-col gap-6 items-center px-4">
-        {/* Category Container */}
-        <div className="w-full relative max-w-6xl mx-auto md:mb-8 sm:mb-5">
-          {/* Left Desktop Arrow */}
-          <button
-            onClick={() => scroll("left")}
-            className="hidden md:flex absolute -left-12 top-[22px] z-30 p-2 bg-white shadow-lg rounded-full border border-gray-200 hover:scale-110 transition-all"
-            style={{ transform: "translateY(-50%)" }}
-          >
-            <ChevronLeft size={20} />
-          </button>
-
-          <div className="overflow-hidden w-full">
-            <div
-              ref={scrollRef}
-              className="flex gap-4 overflow-x-auto scroll-smooth w-full no-scrollbar scrollbar-buttons"
-              style={{
-                paddingBottom: "20px",
-                marginBottom: "-20px",
-                msOverflowStyle: "none",
-                scrollbarWidth: "none",
-              }}
-            >
-              <Link to="/menu" className="shrink-0">
-                <button
-                  onClick={handleOfferClick}
-                  className={`px-6 py-2 rounded-full border transition-all font-serif active:scale-90 ${
-                    !type
-                      ? "bg-gray-400 text-white shadow-md"
-                      : "text-red-600 hover:bg-white hover:scale-110 hover:shadow-lg hover:border-red-500"
-                  }`}
-                >
-                  OFFERS
-                </button>
-              </Link>
-              {[
-                "Poutine Fries",
-                "Burgers",
-                "turkish-coffee",
-                "espresso",
-                "hot-drinks",
-                "cocktails",
-                "soft-drinks",
-              ].map((cat) => (
-                <Link key={cat} to={`/menu/${cat}`} className="shrink-0">
-                  <button
-                    className={`px-6 py-2 rounded-full border transition-all ${type === cat ? "bg-gray-400 text-white shadow-md" : "bg-white text-black hover:bg-gray-50"}`}
-                  >
-                    {cat.replace("-", " ").toUpperCase()}
-                  </button>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Desktop Arrow */}
-          <button
-            onClick={() => scroll("right")}
-            className="hidden md:flex absolute -right-14 top-[22px] z-30 p-2 bg-white shadow-lg rounded-full border border-gray-200 hover:scale-110 transition-all"
-            style={{ transform: "translateY(-50%)" }}
-          >
-            <ChevronRight size={20} />
-          </button>
-
-          {/* Mobile Arrows */}
-          <div className="flex md:hidden justify-center gap-10 mt-2">
+        {/* 1. Category Container - يختفي عند البحث */}
+        {!search && (
+          <div className="w-full relative max-w-6xl mx-auto md:mb-8 sm:mb-5">
             <button
               onClick={() => scroll("left")}
-              className="p-3 bg-white shadow-md rounded-full"
+              className="hidden md:flex absolute -left-12 top-[22px] z-30 p-2 bg-white shadow-lg rounded-full border border-gray-200 hover:scale-110 transition-all"
+              style={{ transform: "translateY(-50%)" }}
             >
               <ChevronLeft size={20} />
             </button>
+
+            <div className="overflow-hidden w-full">
+              <div
+                ref={scrollRef}
+                className="flex gap-4 overflow-x-auto scroll-smooth w-full no-scrollbar scrollbar-buttons"
+                style={{
+                  paddingBottom: "20px",
+                  marginBottom: "-20px",
+                  msOverflowStyle: "none",
+                  scrollbarWidth: "none",
+                }}
+              >
+                <Link to="/menu" className="shrink-0">
+                  <button
+                    onClick={handleOfferClick}
+                    className={`px-6 py-2 rounded-full border transition-all font-serif active:scale-90 ${
+                      !type
+                        ? "bg-gray-400 text-white shadow-md"
+                        : "text-red-600 hover:bg-white hover:scale-110 hover:shadow-lg hover:border-red-500"
+                    }`}
+                  >
+                    OFFERS
+                  </button>
+                </Link>
+                {[
+                  "Poutine Fries",
+                  "Burgers",
+                  "turkish-coffee",
+                  "espresso",
+                  "hot-drinks",
+                  "cocktails",
+                  "soft-drinks",
+                ].map((cat) => (
+                  <Link key={cat} to={`/menu/${cat}`} className="shrink-0">
+                    <button
+                      className={`px-6 py-2 rounded-full border transition-all ${
+                        type === cat
+                          ? "bg-gray-400 text-white shadow-md"
+                          : "bg-white text-black hover:bg-gray-50"
+                      }`}
+                    >
+                      {cat.replace("-", " ").toUpperCase()}
+                    </button>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <button
               onClick={() => scroll("right")}
-              className="p-3 bg-white shadow-md rounded-full"
+              className="hidden md:flex absolute -right-14 top-[22px] z-30 p-2 bg-white shadow-lg rounded-full border border-gray-200 hover:scale-110 transition-all"
+              style={{ transform: "translateY(-50%)" }}
             >
               <ChevronRight size={20} />
             </button>
-          </div>
-        </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto w-full">
-          {listpro.map((product) => (
-            <div key={product.id} className="flex justify-center h-full">
-              <MenuCard
-                img={product.image}
-                title={product.title}
-                description={product.description}
-                price={product.price}
-              />
+            <div className="flex md:hidden justify-center gap-10 mt-2">
+              <button
+                onClick={() => scroll("left")}
+                className="p-3 bg-white shadow-md rounded-full"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="p-3 bg-white shadow-md rounded-full"
+              >
+                <ChevronRight size={20} />
+              </button>
             </div>
-          ))}
-          <Addons items={addonsItems} />
-          <AddonsCombo items={addonsCombo} />
+          </div>
+        )}
+
+        {/* 2. Products Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto w-full">
+          {listpro.length > 0 ? (
+            listpro.map((product) => (
+              <div key={product.id} className="flex justify-center h-full">
+                <MenuCard
+                  img={product.image}
+                  title={product.title}
+                  description={product.description}
+                  price={product.price}
+                />
+              </div>
+            ))
+          ) : (
+            <div className="col-span-full text-center py-10">
+              <p className="text-xl text-gray-500">
+                No items match your search.
+              </p>
+            </div>
+          )}
+
+          {/* 3. Addons - تختفي عند البحث */}
+          {!search && (
+            <>
+              <Addons items={addonsItems} />
+              <AddonsCombo items={addonsCombo} />
+            </>
+          )}
         </div>
       </div>
     </motion.div>

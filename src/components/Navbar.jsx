@@ -14,6 +14,7 @@ const Navbar = () => {
   const navigateToSearch = useNavigate();
   const location = useLocation();
   const inputRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   const handleChangeMe = () => setMenu(!menu);
   const closeMenu = () => setMenu(false);
@@ -22,20 +23,31 @@ const Navbar = () => {
     const val = e.target.value;
     setInputValue(val);
 
-    if (val === "") {
-      setSearch("");
-      navigateToSearch("/menu");
-    } else {
-      setSearch(val);
-      if (!location.pathname.startsWith("/menu")) {
-        navigateToSearch("/menu");
-      }
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
     }
+
+    timeoutRef.current = setTimeout(() => {
+      if (val === "") {
+        setSearch("");
+
+        if (location.pathname.startsWith("/menu")) {
+          navigateToSearch("/menu");
+        }
+      } else {
+        setSearch(val);
+
+        if (!location.pathname.startsWith("/menu")) {
+          navigateToSearch("/menu");
+        }
+      }
+    }, 300);
   };
 
   const toggleSearch = () => {
     if (!showSearch) {
       setShowSearch(true);
+
       if (!location.pathname.startsWith("/menu")) {
         navigateToSearch("/menu");
       }
@@ -44,7 +56,9 @@ const Navbar = () => {
       setShowSearch(false);
       setInputValue("");
       setSearch("");
-      navigateToSearch("/menu");
+      if (location.pathname.startsWith("/menu")) {
+        navigateToSearch("/menu");
+      }
     }
   };
 
@@ -76,7 +90,7 @@ const Navbar = () => {
           </RouterLink>
         </div>
 
-        {/* 2. Desktop Menu - Absolute Center */}
+        {/* 2. Desktop Menu */}
         <nav className="hidden lg:flex gap-8 font-medium absolute left-1/2 -translate-x-1/2">
           <RouterLink
             to="/"

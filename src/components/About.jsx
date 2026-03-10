@@ -8,15 +8,9 @@ import { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const About = () => {
-
-
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-
- 
 
   const [formData, setFormData] = useState({
     name: "",
@@ -77,20 +71,17 @@ const About = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
             <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg shadow-2xl bg-black relative">
-
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  controls
-                  className="w-full h-full object-cover"
-                >
-                  <source src="/video-about.mp4" type="video/mp4" />
-                </video>
-
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+                className="w-full h-full object-cover"
+              >
+                <source src="/video-about.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <div className="space-y-6">

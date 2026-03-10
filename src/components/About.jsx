@@ -4,32 +4,19 @@ import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const About = () => {
-  const videoRef = useRef(null);
-  const [listvideo, setListvideo] = useState([]);
 
-  // 1. جلب البيانات من db.json (نفس منطق مشروع الـ Products)
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetch("/db.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setListvideo(data["video-about"] || []);
-      })
-      .catch((err) => console.error("Fetch error:", err));
   }, []);
 
-  // 2. محاولة التشغيل التلقائي (Autoplay) برمجياً للأمان
-  useEffect(() => {
-    const videoEl = videoRef.current;
-    if (videoEl) {
-      videoEl.muted = true;
-      videoEl.play().catch((err) => console.log("Autoplay blocked:", err));
-    }
-  }, [listvideo]);
+
+ 
 
   const [formData, setFormData] = useState({
     name: "",
@@ -90,9 +77,9 @@ const About = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* 1. قسم الفيديو المعدل ليعمل على الأيفون */}
+
             <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg shadow-2xl bg-black relative">
-              {listvideo.map((item) => (
+
                 <video
                   autoPlay
                   muted
@@ -103,10 +90,9 @@ const About = () => {
                 >
                   <source src="/video-about.mp4" type="video/mp4" />
                 </video>
-              ))}
+
             </div>
 
-            {/* 2. قسم النصوص */}
             <div className="space-y-6">
               <h3 className="text-3xl font-semibold leading-tight">
                 What Makes Our Coffee Special?
@@ -123,13 +109,13 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* قسم الخريطة والـ Reviews */}
+      {/* Reviews */}
       <section
         id="smouha-location"
         className="bg-gray-900 text-black pt-12 pb-12 px-6 md:px-12 lg:px-24 w-full"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-12">
-          {/* الخريطة */}
+          {/* maps */}
           <div className="h-[450px] w-full rounded-2xl shadow-lg border-2 border-blue-100 overflow-hidden relative z-0">
             <MapContainer center={alexPos} zoom={12} className="h-full w-full">
               <TileLayer

@@ -94,17 +94,16 @@ const About = () => {
             <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg shadow-2xl bg-black relative">
               {listvideo.map((item) => (
                 <video
-                  key={item.id}
                   ref={videoRef}
                   loop
                   muted
                   autoPlay
                   playsInline
-                  webkit-playsinline="true"
-                  controls // ضروري جداً لضمان التشغيل في متصفحات iOS
+                  controls
                   className="w-full h-full object-cover"
-                  src={item.video}
-                />
+                >
+                  <source src={item.video} type="video/mp4" />
+                </video>
               ))}
             </div>
 

@@ -15,9 +15,9 @@ const Home = () => {
     navigate("/menu");
   };
 
-  const navigateProducts = () => {
-    navigate("/products");
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     fetch("/db.json")

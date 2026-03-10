@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const About = () => {
+  const videoRef = useRef(null);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -64,6 +65,17 @@ const About = () => {
 
   const alexPos = [31.210863895166653, 29.93937014135554];
 
+  useEffect(() => {
+    const isDesktop = window.innerWidth > 768;
+    const videoEl = videoRef.current;
+
+    if (videoEl && isDesktop) {
+      videoEl.play().catch((err) => {
+        console.log("Autoplay off", err);
+      });
+    }
+  }, []);
+
   return (
     <>
       <section className="bg-gray-100 text-black py-16 px-6 md:px-12 lg:px-24">
@@ -91,14 +103,14 @@ const About = () => {
                 alt="Video Photo"
               /> */}
               <video
-                src="/img/video-about.mp4"
-                autoPlay
-                muted
+                ref={videoRef}
                 loop
+                muted
                 playsInline
-                preload="auto"
-                className="w-full h-full object-cover rounded-[2rem]"
-              ></video>
+                autoPlay
+                controls={window.innerWidth <= 768}
+                src="/img/video-about.mp4"
+              />
             </div>
 
             {/* section-text */}
@@ -126,7 +138,10 @@ const About = () => {
         </motion.div>
       </section>
 
-      <section className="bg-gray-900 text-black pt-12 pb-0 px-6 md:px-12 lg:px-24 w-full">
+      <section
+        id="smouha-location"
+        className="bg-gray-900 text-black pt-12 pb-0 px-6 md:px-12 lg:px-24 w-full"
+      >
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-12"
           initial="hidden"

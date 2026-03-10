@@ -1,11 +1,12 @@
-import { useEffect, useState, useRef, useMemo } from "react"; // زودنا useMemo
+import { useEffect, useState, useRef, useMemo } from "react";
 import MenuCard from "./layouts/MenuCard";
-import { Link, useParams, useNavigate } from "react-router-dom"; // زودنا useNavigate
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useSearch } from "../context/SearchContext";
 import Addons from "./layouts/Addons";
 import AddonsCombo from "./layouts/AddonsCombo";
+import confetti from "canvas-confetti";
 
 const Menu = () => {
   const [allData, setAllData] = useState({});
@@ -80,16 +81,12 @@ const Menu = () => {
 
   const scroll = (direction) => {
     if (!scrollRef.current) return;
-    const scrollAmount = 200;
+    const scrollAmount = 300;
     scrollRef.current.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
   };
-
-  // const listpro = products.filter((product) =>
-  //   product.title.toLowerCase().includes(search.toLowerCase()),
-  // );
 
   const listpro = useMemo(() => {
     const searchTerm = search.toLowerCase().trim();
@@ -101,6 +98,8 @@ const Menu = () => {
 
     let results = [];
     Object.keys(allData).forEach((key) => {
+      if (key === "BEST-SELLER") return;
+
       const filtered = allData[key].filter((product) =>
         product.title.toLowerCase().includes(searchTerm),
       );
@@ -109,6 +108,15 @@ const Menu = () => {
 
     return Array.from(new Map(results.map((item) => [item.id, item])).values());
   }, [search, allData, type]);
+
+  const handleOfferClick = () => {
+    confetti({
+      particleCount: 200,
+      spread: 100,
+      origin: { y: 0.6 },
+      colors: ["#ef4444", "#ffffff", "#ffd700"],
+    });
+  };
 
   return (
     <motion.div
@@ -122,52 +130,83 @@ const Menu = () => {
         visible: { opacity: 1, y: 0 },
       }}
     >
-      <div className="flex flex-wrap gap-6 justify-center px-4">
-        <div className="w-full flex flex-col justify-center md:mb-8 sm:mb-5 px-4 relative max-w-6xl">
-          {/* Category Tabs */}
-          <div
-            ref={scrollRef}
-            className="flex gap-4 overflow-x-auto pb-4 scroll-smooth scrollbar-buttons"
+      <div className="flex flex-col gap-6 items-center px-4">
+        {/* Category Container */}
+        <div className="w-full relative max-w-6xl mx-auto md:mb-8 sm:mb-5">
+          {/* Left Desktop Arrow */}
+          <button
+            onClick={() => scroll("left")}
+            className="hidden md:flex absolute -left-12 top-[22px] z-30 p-2 bg-white shadow-lg rounded-full border border-gray-200 hover:scale-110 transition-all"
+            style={{ transform: "translateY(-50%)" }}
           >
-            <Link to="/menu" className="shrink-0">
-              <button
-                className={`px-6 py-2 rounded-full border transition-all font-serif ${!type ? "bg-gray-400 text-white shadow-md" : "bg-white text-red-600 hover:bg-gray-50"}`}
-              >
-                OFFERS
-              </button>
-            </Link>
-            {[
-              "Poutine Fries",
-              "Burgers",
-              "turkish-coffee",
-              "espresso",
-              "hot-drinks",
-              "cocktails",
-              "soft-drinks",
-            ].map((cat) => (
-              <Link key={cat} to={`/menu/${cat}`} className="shrink-0">
+            <ChevronLeft size={20} />
+          </button>
+
+          <div className="overflow-hidden w-full">
+            <div
+              ref={scrollRef}
+              className="flex gap-4 overflow-x-auto scroll-smooth w-full no-scrollbar scrollbar-buttons"
+              style={{
+                paddingBottom: "20px",
+                marginBottom: "-20px",
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
+              }}
+            >
+              <Link to="/menu" className="shrink-0">
                 <button
-                  className={`px-6 py-2 rounded-full border transition-all ${type === cat ? "bg-gray-400 text-white shadow-md" : "bg-white text-black hover:bg-gray-50"}`}
+                  onClick={handleOfferClick}
+                  className={`px-6 py-2 rounded-full border transition-all font-serif active:scale-90 ${
+                    !type
+                      ? "bg-gray-400 text-white shadow-md"
+                      : "text-red-600 hover:bg-white hover:scale-110 hover:shadow-lg hover:border-red-500"
+                  }`}
                 >
-                  {cat.replace("-", " ").toUpperCase()}
+                  OFFERS
                 </button>
               </Link>
-            ))}
+              {[
+                "Poutine Fries",
+                "Burgers",
+                "turkish-coffee",
+                "espresso",
+                "hot-drinks",
+                "cocktails",
+                "soft-drinks",
+              ].map((cat) => (
+                <Link key={cat} to={`/menu/${cat}`} className="shrink-0">
+                  <button
+                    className={`px-6 py-2 rounded-full border transition-all ${type === cat ? "bg-gray-400 text-white shadow-md" : "bg-white text-black hover:bg-gray-50"}`}
+                  >
+                    {cat.replace("-", " ").toUpperCase()}
+                  </button>
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* Arrows */}
-          <div className="flex lg:hidden justify-center gap-4 sm:gap-10 mt-2">
+          {/* Right Desktop Arrow */}
+          <button
+            onClick={() => scroll("right")}
+            className="hidden md:flex absolute -right-14 top-[22px] z-30 p-2 bg-white shadow-lg rounded-full border border-gray-200 hover:scale-110 transition-all"
+            style={{ transform: "translateY(-50%)" }}
+          >
+            <ChevronRight size={20} />
+          </button>
+
+          {/* Mobile Arrows */}
+          <div className="flex md:hidden justify-center gap-10 mt-2">
             <button
               onClick={() => scroll("left")}
-              className="p-3 bg-[#e9e6bb] shadow-md rounded-full"
+              className="p-3 bg-white shadow-md rounded-full"
             >
-              <ChevronLeft />
+              <ChevronLeft size={20} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 bg-[#e9e6bb] shadow-md rounded-full"
+              className="p-3 bg-white shadow-md rounded-full"
             >
-              <ChevronRight />
+              <ChevronRight size={20} />
             </button>
           </div>
         </div>

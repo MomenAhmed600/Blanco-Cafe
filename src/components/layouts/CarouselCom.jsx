@@ -55,7 +55,7 @@ const CarouselCom = () => {
               <img
                 src={slide.img}
                 alt={slide.title}
-                className="w-full h-full object-fill"
+                className="w-full h-full object-cover"
               />
 
               <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[80%] md:w-[60%] bg-black/40 backdrop-blur-sm text-white p-6 rounded-xl text-center z-10">

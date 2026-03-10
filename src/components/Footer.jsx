@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CgMail } from "react-icons/cg";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaRegCopyright } from "react-icons/fa6";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
         }}
       >
         {/* Main Footer Content */}
-        {/* تم تغيير py-16 إلى pt-4 و pb-16 لتقليل الفراغ العلوي */}
+
         <div className="max-w-7xl mx-auto px-5 pt-4 pb-16 grid grid-cols-2 md:grid-cols-4 gap-10">
           {/* Section 1: Brand */}
           <div className="ft-1">
@@ -97,9 +98,13 @@ const Footer = () => {
             </h5>
             <ul className="space-y-2">
               <li>
-                <a className="hover:text-[#fff] transition text-black cursor-pointer">
+                <HashLink
+                  smooth
+                  to="/about#smouha-location"
+                  className="hover:text-[#fff] transition text-black cursor-pointer"
+                >
                   SMOUHA
-                </a>
+                </HashLink>
               </li>
             </ul>
           </div>

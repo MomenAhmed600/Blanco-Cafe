@@ -1,45 +1,22 @@
 {
   "BEST-SELLER": [
     {
-      "id": "1",
-      "title": "ANY HOT DRINK + ANY DESSERT",
+      "id": "15fg",
+      "title": "ANY DESSERT + ANY HOT DRINK",
       "description": "Indulge in a moment of pure bliss. Pair any of our signature hot drinks with your favorite dessert.",
-      "image": "/img/hot-drink&dessert.png",
-      "price": "140"
+      "image": "/img/hot-drink&dessert.png"
     },
     {
-      "id": "2",
+      "id": "24sdf8",
       "title": "ANY 2 SANDWICHES + 2 FRIES + 2 CAN",
       "description": "Double the taste, double the fun! Pick any 2 sandwiches, paired with 2 crispy fries and 2 refreshing cans.",
-      "image": "/img/2-sandwetich.png",
-      "price": "350"
+      "image": "/img/2-sandwetich.png"
     },
     {
-      "id": "3",
+      "id": "38sdfg",
       "title": "2 PASTA + 2 CAN",
       "description": "Double the pasta, double the love Enjoy any 2 of our signature pasta bowls with 2 refreshing cans. The perfect Italian date night starts here.",
-      "image": "/img/2-pasta.png",
-      "price": "350"
-    }
-  ],
-  "BEST-Products": [
-    {
-      "id": "4",
-      "title": "Classic Turkish Coffee",
-      "description": "Experience the essence of premium coffee with our expertly roasted beans, crafted for true coffee lovers who appreciate quality, freshness, and bold flavor.",
-      "image": "/img/products-cofee.png"
-    },
-    {
-      "id": "5",
-      "title": "Turkish Coffee",
-      "description": "A refined selection of premium coffee beans, thoughtfully packaged to offer an exceptional coffee experience or the perfect gift for coffee enthusiasts.",
-      "image": "/img/products-cofee.png"
-    },
-    {
-      "id": "6",
-      "title": "Turkish Coffee [Hail]",
-      "description": "High-quality coffee beans with a rich taste and deep aroma, perfect for your daily coffee moments.",
-      "image": "/img/products-cofee.png"
+      "image": "/img/2-pasta.png"
     }
   ],
   "Special-Sale": [
@@ -47,7 +24,7 @@
       "id": "1ssa1",
       "title": "ANY DESSERT + ANY HOT DRINK",
       "description": "Pair your favorite drink with a sweet treat.",
-      "image": "https://i.ibb.co/4RzBCLJy/hot-drink-dessert.png",
+      "image": "/img/hot-drink&dessert.png",
       "price": "140"
     },
     {

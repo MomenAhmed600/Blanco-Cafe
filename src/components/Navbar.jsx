@@ -1,9 +1,10 @@
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
 import Button from "./layouts/Button";
 import { useSearch } from "../context/SearchContext";
+import confetti from "canvas-confetti";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -12,24 +13,37 @@ const Navbar = () => {
   const { setSearch } = useSearch();
   const navigateToSearch = useNavigate();
   const location = useLocation();
+  const inputRef = useRef(null);
 
   const handleChangeMe = () => setMenu(!menu);
   const closeMenu = () => setMenu(false);
 
-  const handleChange = (e) => setInputValue(e.target.value);
+  const handleChange = (e) => {
+    const val = e.target.value;
+    setInputValue(val);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSearch(inputValue);
-    handleSearchClose();
+    if (val === "") {
+      setSearch("");
+      navigateToSearch("/menu");
+    } else {
+      setSearch(val);
+      if (!location.pathname.startsWith("/menu")) {
+        navigateToSearch("/menu");
+      }
+    }
   };
 
-  const handleSearchClose = () => setShowSearch(false);
-
-  const handleSearchShow = () => {
-    setShowSearch(true);
-    const currentPath = location.pathname;
-    if (!currentPath.startsWith("/menu")) {
+  const toggleSearch = () => {
+    if (!showSearch) {
+      setShowSearch(true);
+      if (!location.pathname.startsWith("/menu")) {
+        navigateToSearch("/menu");
+      }
+      setTimeout(() => inputRef.current?.focus(), 100);
+    } else {
+      setShowSearch(false);
+      setInputValue("");
+      setSearch("");
       navigateToSearch("/menu");
     }
   };
@@ -38,56 +52,86 @@ const Navbar = () => {
     if (!location.pathname.startsWith("/menu")) {
       setSearch("");
       setInputValue("");
+      setShowSearch(false);
     }
   }, [location.pathname, setSearch]);
 
+  const handleOfferClick = () => {
+    confetti({
+      particleCount: 200,
+      spread: 100,
+      origin: { y: 0.6 },
+      colors: ["#ef4444", "#ffffff", "#ffd700"],
+    });
+  };
+
   return (
-    <>
-      <div className="w-full z-50 relative">
-        <div className="flex justify-between items-center p-5 lg:px-32 bg-gradient-to-r from-[#FFF] to-[#d2cc76] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-          {/* Logo */}
-          <RouterLink to="/">
-            <div className="flex items-center gap-2">
-              <img src="/logo-2.png" alt="logo" className="w-8 h-8" />
-              <h1 className="text-xl font-semibold">Blanco </h1>
-            </div>
+    <div className="w-full sticky top-0 z-[100] bg-white">
+      <div className="flex justify-between items-center p-5 lg:px-32 bg-gradient-to-r from-[#FFF] to-[#d2cc76] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        {/* 1. Logo */}
+        <div className="flex items-center min-w-[150px]">
+          <RouterLink to="/" className="flex items-center gap-2">
+            <img src="/logo-2.png" alt="logo" className="w-8 h-8" />
+            <h1 className="text-xl font-semibold">Blanco</h1>
           </RouterLink>
+        </div>
 
-          {/* Desktop Menu */}
-          <nav className="hidden lg:flex gap-8 font-medium">
-            <RouterLink to="/" className="hover:text-white text-black">
-              Home
-            </RouterLink>
+        {/* 2. Desktop Menu - Absolute Center */}
+        <nav className="hidden lg:flex gap-8 font-medium absolute left-1/2 -translate-x-1/2">
+          <RouterLink
+            to="/"
+            className="hover:text-white text-black transition-colors"
+          >
+            Home
+          </RouterLink>
+          <RouterLink
+            to="/menu"
+            className="hover:text-white text-black transition-colors"
+            onClick={handleOfferClick}
+          >
+            Menu
+          </RouterLink>
+          <RouterLink
+            to="/about"
+            className="hover:text-white text-black transition-colors"
+          >
+            About Us
+          </RouterLink>
+        </nav>
 
-            <RouterLink to="/menu" className="hover:text-white text-black">
-              Menu
-            </RouterLink>
-            <RouterLink to="/about" className="hover:text-white text-black">
-              About Us
-            </RouterLink>
-          </nav>
-
-          {/* Search Button Desktop */}
-          <div className="hidden lg:flex gap-5">
+        {/* 3. Search & Contact Container */}
+        <div className="flex items-center gap-4 justify-end min-w-[150px]">
+          <div className="relative flex items-center">
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Search..."
+              value={inputValue}
+              onChange={handleChange}
+              className={`transition-all duration-300 ease-in-out bg-white/90 border border-gray-300 rounded-full outline-none text-sm
+                ${showSearch ? "w-[150px] md:w-[200px] px-4 py-1.5 opacity-100" : "w-0 opacity-0 p-0 border-none"}
+              `}
+            />
             <button
-              onClick={handleSearchShow}
-              className="hover:text-white cursor-pointer"
+              onClick={toggleSearch}
+              className="ml-2 hover:text-white transition-colors p-1"
             >
-              <BsSearch size={20} />
+              {showSearch && inputValue === "" ? (
+                <AiOutlineClose size={20} />
+              ) : (
+                <BsSearch size={20} />
+              )}
             </button>
-            <a href="tel:+2015 51589296" className="inline-block w-full">
+          </div>
+
+          <div className="hidden lg:block">
+            <a href="tel:+2015 51589296">
               <Button title="Contact Us" />
             </a>
           </div>
 
-          {/* Mobile toggle */}
-          <div className="lg:hidden gap-5 flex items-center">
-            <button
-              onClick={handleSearchShow}
-              className="hover:text-white cursor-pointer"
-            >
-              <BsSearch size={20} />
-            </button>
+          {/* Mobile Toggle */}
+          <div className="lg:hidden flex items-center">
             <button onClick={handleChangeMe}>
               {menu ? (
                 <AiOutlineClose size={25} />
@@ -97,81 +141,29 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {menu && (
-          <div className="lg:hidden flex flex-col absolute top-full left-0 w-full bg-black text-white gap-8 py-8 text-2xl text-center z-50">
-            <RouterLink to="/" onClick={closeMenu}>
-              Home
-            </RouterLink>
-            <RouterLink to="/menu" onClick={closeMenu}>
-              Menu
-            </RouterLink>
-            <RouterLink to="/about" onClick={closeMenu}>
-              About Us
-            </RouterLink>
-            <div className="flex flex-col gap-5 items-center">
-              <a
-                href="tel:+2015 51589296"
-                className="w-full flex items-center justify-center"
-              >
-                <Button title="Contact Us" />
-              </a>
-            </div>
-          </div>
-        )}
       </div>
 
-      {/* Modal - Search */}
-      {showSearch && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center">
-          <div
-            className="fixed inset-0 bg-black opacity-50"
-            onClick={handleSearchClose}
-          ></div>
-          <div className="relative w-full max-w-md mx-auto z-[70] p-4">
-            <div className="bg-white rounded-lg shadow-lg">
-              <div className="flex justify-between items-center p-5 border-b">
-                <h3 className="text-xl font-semibold">Search Item</h3>
-                <button onClick={handleSearchClose} className="text-2xl">
-                  &times;
-                </button>
-              </div>
-              <div className="p-6 bg-gray-100">
-                <form onSubmit={handleSubmit}>
-                  <input
-                    autoFocus
-                    type="text"
-                    placeholder="What are you looking for?"
-                    value={inputValue}
-                    onChange={handleChange}
-                    className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-[#d2cc76] outline-none text-black"
-                  />
-                  <div className="flex justify-end gap-2 mt-6">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setInputValue("");
-                        setSearch("");
-                      }}
-                      className="px-4 py-2 rounded-md bg-black text-white"
-                    >
-                      Clear
-                    </button>
-                    <button
-                      type="submit"
-                      className="px-6 py-2 text-black bg-[#d2cc76] rounded-md font-medium"
-                    >
-                      Search
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+      {/* Mobile Menu */}
+      {menu && (
+        <div className="lg:hidden flex flex-col absolute top-full left-0 w-full bg-black text-white gap-8 py-8 text-2xl text-center z-50">
+          <RouterLink to="/" onClick={closeMenu}>
+            Home
+          </RouterLink>
+          <RouterLink to="/menu" onClick={closeMenu}>
+            Menu
+          </RouterLink>
+          <RouterLink to="/about" onClick={closeMenu}>
+            About Us
+          </RouterLink>
+          <a
+            href="tel:+2015 51589296"
+            className="w-full flex items-center justify-center"
+          >
+            <Button title="Contact Us" />
+          </a>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

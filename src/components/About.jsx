@@ -9,8 +9,27 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const About = () => {
   const videoRef = useRef(null);
-  const [listvideo, setListvideo] = useState([]); // لتخزين الفيديو من الـ JSON
-  const [isLoading, setIsLoading] = useState(true); // لضمان عدم ظهور الفيديو مشوه في الأيفون
+  const [listvideo, setListvideo] = useState([]);
+
+  // 1. جلب البيانات من db.json (نفس منطق مشروع الـ Products)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    fetch("/db.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setListvideo(data["video-about"] || []);
+      })
+      .catch((err) => console.error("Fetch error:", err));
+  }, []);
+
+  // 2. محاولة التشغيل التلقائي (Autoplay) برمجياً للأمان
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    if (videoEl) {
+      videoEl.muted = true;
+      videoEl.play().catch((err) => console.log("Autoplay blocked:", err));
+    }
+  }, [listvideo]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -22,36 +41,8 @@ const About = () => {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
-  // 1. Fetch data from db.json
-  useEffect(() => {
-    window.scrollTo(0, 0);
-
-    fetch("/db.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setListvideo(data["video-about"] || []);
-      })
-      .catch((error) => {
-        console.error("Error fetching db.json:", error);
-      });
-  }, []);
-
-  // 2. محاولة التشغيل يدوياً بعد ما الـ loading يخلص (مهم جداً للأيفون)
-  useEffect(() => {
-    const videoEl = videoRef.current;
-    if (videoEl && !isLoading) {
-      videoEl.muted = true;
-      videoEl.play().catch((err) => {
-        console.log("Autoplay is disabled", err);
-      });
-    }
-  }, [isLoading]);
-
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const sendEmail = (e) => {
@@ -61,22 +52,13 @@ const About = () => {
     setError("");
 
     emailjs
-      .send(
-        "service", // Service ID
-        "template", // Template ID
-        formData,
-        "", // Public Key
-      )
+      .send("service", "template", formData, "")
       .then(() => {
         setSuccess("Message sent successfully ");
         setFormData({ name: "", email: "", message: "" });
       })
-      .catch(() => {
-        setError("Something went wrong ");
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+      .catch(() => setError("Something went wrong "))
+      .finally(() => setLoading(false));
   };
 
   let DefaultIcon = L.icon({
@@ -108,15 +90,8 @@ const About = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* section-video container */}
-            <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-2xl relative bg-black">
-              {/* عرض الـ Loading لحد ما الفيديو يجهز (نفس فكرة مشروعك القديم) */}
-              {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center text-white bg-gray-300 z-10 font-bold">
-                  LOADING VIDEO ...
-                </div>
-              )}
-
+            {/* 1. قسم الفيديو المعدل ليعمل على الأيفون */}
+            <div className="w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg shadow-2xl bg-black relative">
               {listvideo.map((item) => (
                 <video
                   key={item.id}
@@ -126,31 +101,22 @@ const About = () => {
                   autoPlay
                   playsInline
                   webkit-playsinline="true"
+                  controls // ضروري جداً لضمان التشغيل في متصفحات iOS
                   className="w-full h-full object-cover"
                   src={item.video}
-                  onLoadedData={() => setIsLoading(false)} // بيغير الـ state لما الداتا تحمل
-                  style={{ display: isLoading ? "none" : "block" }} // بيمنع الـ glitch في الأيفون
                 />
               ))}
             </div>
 
-            {/* section-text */}
+            {/* 2. قسم النصوص */}
             <div className="space-y-6">
               <h3 className="text-3xl font-semibold leading-tight">
                 What Makes Our Coffee Special?
               </h3>
-
               <p className="text-gray-400 leading-relaxed text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Doloribus repellendus dolores ratione facere corrupti tempora
-                repellat totam aspernatur dignissimos, deleniti laudantium.
-              </p>
-
-              <p className="text-gray-500 leading-relaxed">
                 Crafting Your quality, fresh roasted and perfect blended coffee
                 is our true commitment since 2006.
               </p>
-
               <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-md transition duration-300 font-medium uppercase text-sm">
                 Read More
               </button>
@@ -159,22 +125,13 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* Section Location & Form */}
+      {/* قسم الخريطة والـ Reviews */}
       <section
         id="smouha-location"
-        className="bg-gray-900 text-black pt-12 pb-0 px-6 md:px-12 lg:px-24 w-full"
+        className="bg-gray-900 text-black pt-12 pb-12 px-6 md:px-12 lg:px-24 w-full"
       >
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: 50 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-12">
+          {/* الخريطة */}
           <div className="h-[450px] w-full rounded-2xl shadow-lg border-2 border-blue-100 overflow-hidden relative z-0">
             <MapContainer center={alexPos} zoom={12} className="h-full w-full">
               <TileLayer
@@ -182,18 +139,14 @@ const About = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <Marker position={alexPos}>
-                <Popup>
-                  <div className="text-center font-sans">
-                    <h3 className="font-bold text-blue-700">فرع الإسكندرية</h3>
-                    <p className="text-xs">سموحة، الإسكندرية</p>
-                  </div>
-                </Popup>
+                <Popup>فرع سموحة، الإسكندرية</Popup>
               </Marker>
             </MapContainer>
           </div>
 
+          {/* الفورم */}
           <div className="space-y-6">
-            <h2 className="text-center text-4xl font-bold mb-12 uppercase tracking-widest text-white">
+            <h2 className="text-center text-4xl font-bold mb-8 uppercase tracking-widest text-white">
               Reviews
             </h2>
             <form onSubmit={sendEmail} className="max-w-md mx-auto space-y-4">
@@ -204,7 +157,7 @@ const About = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full border p-2 rounded"
+                className="w-full border p-2 rounded outline-none"
               />
               <input
                 type="email"
@@ -213,7 +166,7 @@ const About = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full border p-2 rounded"
+                className="w-full border p-2 rounded outline-none"
               />
               <textarea
                 name="message"
@@ -221,20 +174,28 @@ const About = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full border p-2 rounded h-32"
+                className="w-full border p-2 rounded h-32 outline-none"
               />
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded transition font-bold"
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
-              {success && <p className="text-green-600">{success}</p>}
-              {error && <p className="text-red-600">{error}</p>}
+              {success && (
+                <p className="text-green-500 font-bold text-center mt-2">
+                  {success}
+                </p>
+              )}
+              {error && (
+                <p className="text-red-500 font-bold text-center mt-2">
+                  {error}
+                </p>
+              )}
             </form>
           </div>
-        </motion.div>
+        </div>
       </section>
     </>
   );

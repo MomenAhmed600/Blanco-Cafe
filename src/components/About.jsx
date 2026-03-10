@@ -96,8 +96,6 @@ const About = () => {
                 <video
                   ref={videoRef}
                   loop
-                  muted
-                  autoPlay
                   playsInline
                   controls
                   className="w-full h-full object-cover"

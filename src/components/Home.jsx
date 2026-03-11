@@ -72,7 +72,7 @@ const Home = () => {
           NEW-<span className="text-red-600">SALE</span>
         </h1>
 
-        <p className="mt-5 font-mono text-lg text-center px-4 flex justify-center items-center">
+        <p className="mt-5 font-medium text-lg text-center px-4 flex justify-center items-center">
           Your Favorite Pairings, Now at Exclusive Prices for a Limited Time.
         </p>
 
@@ -145,7 +145,7 @@ const Home = () => {
           Your Private Gaming Corner
         </h1>
 
-        <p className="mt-5 font-mono text-lg text-center px-4 flex justify-center items-center">
+        <p className="mt-5 font-medium text-lg text-center px-4 flex justify-center items-center">
           Discover our curated selection of specialty coffee and high-end gaming
           setups, all in one place.
         </p>

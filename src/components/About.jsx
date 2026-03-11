@@ -67,7 +67,7 @@ const About = () => {
           }}
         >
           <h2 className="text-center text-4xl font-bold mb-12 uppercase tracking-widest">
-            About <span className="text-orange-600">Us</span>
+            About <span className=" text-[#dfdb9f]">Us</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -92,7 +92,7 @@ const About = () => {
                 Crafting Your quality, fresh roasted and perfect blended coffee
                 is our true commitment since 2006.
               </p>
-              <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-md transition duration-300 font-medium uppercase text-sm">
+              <button className=" border-black bg-[#e3e0ac] hover:bg-[#d2cc76] hover:text-[#FFF] px-8 py-3 rounded-md transition duration-300 font-medium uppercase text-sm">
                 Read More
               </button>
             </div>
@@ -154,7 +154,7 @@ const About = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded transition font-bold"
+                className="w-full border-black bg-[#e3e0ac] hover:bg-[#d2cc76] hover:text-[#FFF] py-2 rounded transition font-bold"
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>

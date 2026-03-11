@@ -23,7 +23,7 @@ const MenuCard = React.memo(({ img, title, description, price = [] }) => {
 
         <div className="flex justify-around items-center mt-auto">
           <div className="mt-auto">
-            <button className="bg-black text-white px-5 py-1 rounded-2xl text-lg font-black transition-all hover:bg-zinc-800 active:scale-95 shadow-lg tracking-wide">
+            <button className="bg-black text-white px-5 py-1 rounded-2xl text-lg font-black transition-all hover:bg-zinc-800 active:scale-95 shadow-lg tracking-wide cursor-text">
               {price}
             </button>
           </div>

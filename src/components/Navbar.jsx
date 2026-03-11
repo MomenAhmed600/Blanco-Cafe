@@ -130,8 +130,8 @@ const Navbar = () => {
               placeholder="Search..."
               value={inputValue}
               onChange={handleChange}
-              className={`transition-all duration-300 ease-in-out bg-white/90 border border-gray-300 rounded-full outline-none text-sm
-                ${showSearch ? "w-[130px] md:w-[200px] px-4 py-1.5 opacity-100" : "w-0 opacity-0 p-0 border-none"}
+              className={`transition-all duration-300 ease-in-out bg-white/90 border border-gray-300 rounded-full outline-none text-base
+                ${showSearch ? "w-[135px] md:w-[200px] px-4 py-1.5 opacity-100" : "w-0 opacity-0 p-0 border-none"}
               `}
             />
 

@@ -4,19 +4,19 @@
       "id": "15fg",
       "title": "ANY DESSERT + ANY HOT DRINK",
       "description": "Indulge in a moment of pure bliss. Pair any of our signature hot drinks with your favorite dessert.",
-      "image": "/img/hot-drink&dessert.png"
+      "image": "/img/seller/hot-drink&dessert.webp"
     },
     {
       "id": "24sdf8",
       "title": "ANY 2 SANDWICHES + 2 FRIES + 2 CAN",
       "description": "Double the taste, double the fun! Pick any 2 sandwiches, paired with 2 crispy fries and 2 refreshing cans.",
-      "image": "/img/2-sandwetich.png"
+      "image": "/img/seller/2-sandwetich.webp"
     },
     {
       "id": "38sdfg",
       "title": "2 PASTA + 2 CAN",
       "description": "Double the pasta, double the love Enjoy any 2 of our signature pasta bowls with 2 refreshing cans. The perfect Italian date night starts here.",
-      "image": "/img/2-pasta.png"
+      "image": "/img/seller/2-pasta.webp"
     }
   ],
   "Special-Sale": [
@@ -24,35 +24,35 @@
       "id": "1ssa1",
       "title": "ANY DESSERT + ANY HOT DRINK",
       "description": "Pair your favorite drink with a sweet treat.",
-      "image": "/img/hot-drink&dessert.png",
+      "image": "/img/seller/hot-drink&dessert.webp",
       "price": "140"
     },
     {
       "id": "2ssa1",
       "title": "TWO SANDWICHES+ TWO FRIES+ TWO CAN",
       "description": "Double the Meal, Double the Fun!",
-      "image": "/img/2-sandwetich.png",
+      "image": "/img/seller/2-sandwetich.webp",
       "price": "350"
     },
     {
       "id": "3ssa1",
       "title": "TWO PASTA + TWO CAN",
       "description": "Double Pasta, Double Love: 2 Bowls & 2 Drinks.",
-      "image": "/img/2-pasta.png",
+      "image": "/img/seller/2-pasta.webp",
       "price": "350"
     },
     {
       "id": "4ssa1",
       "title": "ANY TWO POUTINES",
       "description": "Besties' Deal: 2 Poutines = 300 LE.",
-      "image": "/img/2-poutine.png",
+      "image": "/img/seller/2-poutine.webp",
       "price": "300"
     },
     {
       "id": "5ssa1",
       "title": "TWO PYREX OR TWO EMY SHISHA",
       "description": "2 Shishas (Pyrex/Emy) for 200 LE (+VAT).",
-      "image": "/img/2-shesha.png",
+      "image": "/img/seller/2-shesha.webp",
       "price": "200"
     }
   ],
@@ -415,28 +415,28 @@
     {
       "id": "72",
       "title": "Poutine Burger",
-      "image": "/img/Poutine Burger.jpg",
+      "image": "/img/poutine/Poutine Burger.webp",
       "price": "190"
     },
     {
       "id": "73",
       "title": "Poutine Grilled Chicken",
       "description": "Medium or Dark Roast",
-      "image": "/img/Poutine Grilled Chicken.png",
+      "image": "/img/poutine/Poutine Grilled Chicken.webp",
       "price": "195"
     },
     {
       "id": "74",
       "title": "Poutine Crispy",
       "description": "Medium Roast",
-      "image": "/img/Poutine Crispy.png",
+      "image": "/img/poutine/Poutine Crispy.webp",
       "price": "185"
     },
     {
       "id": "75",
       "title": "Poutine Jalapeno",
       "description": "Medium Roast",
-      "image": "/img/Poutine Jalapeno.png",
+      "image": "/img/poutine/Poutine Jalapeno.webp",
       "price": "180"
     }
   ],

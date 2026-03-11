@@ -10,22 +10,22 @@ import "swiper/css/navigation";
 const CarouselCom = () => {
   const slides = [
     {
-      img: "/img/room-1.jpg",
+      img: "/img/rooms/room-1.webp",
       title: "Exclusive Gaming",
       desc: "Level up your gaming experience in our fully equipped private rooms.",
     },
     {
-      img: "/img/room-2.jpg",
+      img: "/img/rooms/room-2.webp",
       title: "Exclusive Gaming",
       desc: "Level up your gaming experience in our fully equipped private rooms.",
     },
     {
-      img: "/img/room-birth.jpg",
+      img: "/img/rooms/room-birth.webp",
       title: "Celebrate Your Special Day",
       desc: "Level up your birthday in our exclusive private lounge.",
     },
     {
-      img: "/img/room-val.png",
+      img: "/img/rooms/room-val.webp",
       title: "Valentine’s Private Room",
       desc: "Private, romantic, and perfectly curated.",
     },

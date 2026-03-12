@@ -1,10 +1,9 @@
-import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
-import Button from "./layouts/Button";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { useSearch } from "../context/SearchContext";
-import confetti from "canvas-confetti";
+import Button from "./layouts/Button";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -19,7 +18,6 @@ const Navbar = () => {
   const handleChangeMe = () => setMenu(!menu);
   const closeMenu = () => setMenu(false);
 
-  // فانكشن البحث مع الـ Debouncing
   const handleChange = (e) => {
     const val = e.target.value;
     setInputValue(val);
@@ -43,14 +41,13 @@ const Navbar = () => {
     }, 300);
   };
 
-  // فانكشن مسح البحث (Clear Search)
   const clearSearch = () => {
     setInputValue("");
     setSearch("");
     if (location.pathname.startsWith("/menu")) {
       navigateToSearch("/menu");
     }
-    inputRef.current?.focus(); // يرجع الـ Focus للـ Input بعد المسح
+    inputRef.current?.focus();
   };
 
   const toggleSearch = () => {
@@ -78,15 +75,6 @@ const Navbar = () => {
     }
   }, [location.pathname, setSearch]);
 
-  const handleOfferClick = () => {
-    confetti({
-      particleCount: 200,
-      spread: 100,
-      origin: { y: 0.6 },
-      colors: ["#ef4444", "#ffffff", "#ffd700"],
-    });
-  };
-
   return (
     <div className="w-full sticky top-0 z-[100] bg-white">
       <div className="flex justify-between items-center p-5 lg:px-32 bg-gradient-to-r from-[#FFF] to-[#d2cc76] shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
@@ -109,7 +97,6 @@ const Navbar = () => {
           <RouterLink
             to="/menu"
             className="hover:text-white text-black transition-colors"
-            onClick={handleOfferClick}
           >
             Menu
           </RouterLink>

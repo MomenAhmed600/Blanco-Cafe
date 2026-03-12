@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const MenuCard = React.memo(({ img, title, description, price = [] }) => {
   return (
@@ -17,7 +17,7 @@ const MenuCard = React.memo(({ img, title, description, price = [] }) => {
           {title}
         </h3>
 
-        <p className="text-[14px] mb-3  text-gray-500 font-medium line-clamp-2 min-h-[40px] flex items-center justify-center font-mono">
+        <p className="text-[14px] mb-3  text-gray-500 font-medium line-clamp-2 min-h-[40px] text-center font-mono">
           {description}
         </p>
 

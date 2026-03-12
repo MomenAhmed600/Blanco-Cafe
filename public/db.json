@@ -60,35 +60,35 @@
     {
       "id": "18",
       "title": "Turkish Coffee",
-      "image": "/img/turkish-coffee/Turkish Coffee.png",
+      "image": "/img/turkish-coffee/Turkish Coffee.webp",
       "price": "38"
     },
     {
       "id": "19",
       "title": "Double Turkish Coffee",
       "description": "Medium or Dark Roast",
-      "image": "/img/turkish-coffee/Double Turkish Coffee.png",
+      "image": "/img/turkish-coffee/Double Turkish Coffee.webp",
       "price": "48"
     },
     {
       "id": "20",
       "title": "Nutella Coffee",
       "description": "Medium Roast",
-      "image": "/img/turkish-coffee/Nutella Coffee.png",
+      "image": "/img/turkish-coffee/Nutella Coffee.webp",
       "price": "69"
     },
     {
       "id": "21",
       "title": "French Coffee",
       "description": "Medium Roast",
-      "image": "/img/turkish-coffee/French Coffee.png",
+      "image": "/img/turkish-coffee/French Coffee.webp",
       "price": "52"
     },
     {
       "id": "22",
       "title": "Hazelnut Coffee",
       "description": "Medium Roast",
-      "image": "/img/turkish-coffee/Hazelnut Coffee.png",
+      "image": "/img/turkish-coffee/Hazelnut Coffee.webp",
       "price": "72"
     }
   ],
@@ -96,73 +96,73 @@
     {
       "id": "23",
       "title": "ESPRESSO",
-      "image": "/img/espresso/ESPRESSO.png",
+      "image": "/img/espresso/ESPRESSO.webp",
       "price": "55"
     },
     {
       "id": "24",
       "title": "Double Espresso",
-      "image": "/img/espresso/Double Espresso.png",
+      "image": "/img/espresso/Double Espresso.webp",
       "price": "60"
     },
     {
       "id": "25",
       "title": "Espresso Avocado",
-      "image": "/img/espresso/Espresso Avocado.png",
+      "image": "/img/espresso/Espresso Avocado.webp",
       "price": "69"
     },
     {
       "id": "26",
       "title": "Cappuccino",
-      "image": "/img/espresso/Cappuccino.png",
+      "image": "/img/espresso/Cappuccino.webp",
       "price": "75"
     },
     {
       "id": "27",
       "title": "Latte",
-      "image": "/img/espresso/Latte.png",
+      "image": "/img/espresso/Latte.webp",
       "price": "77"
     },
     {
       "id": "28",
       "title": "Spanish Latte",
-      "image": "/img/espresso/Spanish Latte.png",
+      "image": "/img/espresso/Spanish Latte.webp",
       "price": "95"
     },
     {
       "id": "29",
       "title": "Mocha",
-      "image": "/img/espresso/Mocha.png",
+      "image": "/img/espresso/Mocha.webp",
       "price": "77"
     },
     {
       "id": "30",
       "title": "Macchiato",
-      "image": "/img/espresso/Macchiato.png",
+      "image": "/img/espresso/Macchiato.webp",
       "price": "67"
     },
     {
       "id": "31",
       "title": "Double Macchiato",
-      "image": "/img/espresso/Double Macchiato.png",
+      "image": "/img/espresso/Double Macchiato.webp",
       "price": "77"
     },
     {
       "id": "32",
       "title": "Corto",
-      "image": "/img/espresso/Corto.png",
+      "image": "/img/espresso/Corto.webp",
       "price": "72"
     },
     {
       "id": "33",
       "title": "Flat White",
-      "image": "/img/espresso/Flat White.png",
+      "image": "/img/espresso/Flat White.webp",
       "price": "85"
     },
     {
       "id": "34",
       "title": "American Coffee",
-      "image": "/img/espresso/American Coffee.png",
+      "image": "/img/espresso/American Coffee.webp",
       "price": "80"
     }
   ],
@@ -170,91 +170,91 @@
     {
       "id": "35",
       "title": "Nescafe",
-      "image": "/img/hot-drinks/Nescafe.png",
+      "image": "/img/hot-drinks/Nescafe.webp",
       "price": "74"
     },
     {
       "id": "36",
       "title": "Hot Cider",
-      "image": "/img/hot-drinks/Hot Cider.png",
+      "image": "/img/hot-drinks/Hot-Cider.webp",
       "price": "52"
     },
     {
       "id": "37",
       "title": "Hot Chocolate",
-      "image": "/img/hot-drinks/Hot Chocolat.png",
+      "image": "/img/hot-drinks/Hot-Chocolat.webp",
       "price": "73"
     },
     {
       "id": "38",
       "title": "Hot Herps",
-      "image": "/img/hot-drinks/Hot Herps.png",
+      "image": "/img/hot-drinks/Hot-Herps.webp",
       "price": "47"
     },
     {
       "id": "39",
       "title": "Vitamin C",
-      "image": "/img/hot-drinks/Vitamin C.png",
+      "image": "/img/hot-drinks/Vitamin-C.webp",
       "price": "57"
     },
     {
       "id": "40",
       "title": "Sahlab",
-      "image": "/img/hot-drinks/Sahlab.png",
+      "image": "/img/hot-drinks/Sahlab.webp",
       "price": "77"
     },
     {
       "id": "41",
       "title": "Tea",
-      "image": "/img/hot-drinks/Tea.png",
+      "image": "/img/hot-drinks/Tea.webp",
       "price": "32"
     },
     {
       "id": "42",
       "title": "Brad Tea",
-      "image": "/img/hot-drinks/Brad Tea.png",
+      "image": "/img/hot-drinks/Brad-Tea.webp",
       "price": "45"
     },
     {
       "id": "43",
       "title": "Tea With Milk",
-      "image": "/img/hot-drinks/Tea With Milk.png",
+      "image": "/img/hot-drinks/Tea-With-Milk.webp",
       "price": "55"
     },
     {
       "id": "44",
       "title": "Brad Tea With Milk",
-      "image": "/img/hot-drinks/Brad Tea With Milk.png",
+      "image": "/img/hot-drinks/Brad-Tea-With-Milk.webp",
       "price": "60"
     },
     {
       "id": "45",
       "title": "Matcha",
-      "image": "/img/hot-drinks/Matcha.png",
+      "image": "/img/hot-drinks/Matcha.webp",
       "price": "95"
     },
     {
       "id": "46",
       "title": "Tea Flavors",
-      "image": "/img/hot-drinks/Tea Flavors.png",
+      "image": "/img/hot-drinks/Tea-Flavors.webp",
       "price": "45"
     },
     {
       "id": "47",
       "title": "Brad Tea Flavors",
-      "image": "/img/hot-drinks/Brad Tea Flavors.png",
+      "image": "/img/hot-drinks/Brad-Tea-Flavors.webp",
       "price": "50"
     },
     {
       "id": "48",
       "title": "Tea Flavors With Milk",
-      "image": "/img/hot-drinks/Tea Flavors With Milk.png",
+      "image": "/img/hot-drinks/Tea-Flavors-With-Milk.webp",
       "price": "65"
     },
     {
       "id": "49",
       "title": "Brad Tea Flavors With Milk",
-      "image": "/img/hot-drinks/Brad Tea Flavors With Milk.png",
+      "image": "/img/hot-drinks/Brad-Tea-Flavors-With-Milk.webp",
       "price": "70"
     }
   ],
@@ -415,28 +415,29 @@
     {
       "id": "72",
       "title": "Poutine Burger",
-      "image": "/img/poutine/Poutine Burger.webp",
+      "description": "FRIES/BURGER/MUSHROOM-DEMI-GLACE-SAUCE/CHEESE-SAUCE",
+      "image": "/img/poutine/Poutine-Burger.webp",
       "price": "190"
     },
     {
       "id": "73",
       "title": "Poutine Grilled Chicken",
-      "description": "Medium or Dark Roast",
-      "image": "/img/poutine/Poutine Grilled Chicken.webp",
+      "description": "FRIES/GRILLED-CHICKEN/WHITE SAUCE",
+      "image": "/img/poutine/Poutine-Grilled-Chicken.webp",
       "price": "195"
     },
     {
       "id": "74",
       "title": "Poutine Crispy",
-      "description": "Medium Roast",
-      "image": "/img/poutine/Poutine Crispy.webp",
+      "description": "FRIES/CRISPY/RANCH-SAUCE/CHEESE-SAUCE",
+      "image": "/img/poutine/Poutine-Crispy.webp",
       "price": "185"
     },
     {
       "id": "75",
       "title": "Poutine Jalapeno",
-      "description": "Medium Roast",
-      "image": "/img/poutine/Poutine Jalapeno.webp",
+      "description": "FRIES/JALAPENO/BEEF-CHEESE-SAUCE/SWEET-CHILI-SAUCE",
+      "image": "/img/poutine/Poutine-Jalapeno.webp",
       "price": "180"
     }
   ],
@@ -444,67 +445,67 @@
     {
       "id": "76",
       "title": "Classic Burger",
-      "image": "/img/burgers/Cheese Burgerr.png",
+      "image": "/img/burgers/Classic-Burger.webp",
       "price": "150"
     },
     {
       "id": "77",
       "title": "Cheese Burger",
-      "image": "/img/burgers/Cheese Burger.png",
+      "image": "/img/burgers/Cheese-Burger.webp",
       "price": "160"
     },
     {
       "id": "78",
       "title": "BBQ Burger",
-      "image": "/img/burgers/BBQ Burger.png",
+      "image": "/img/burgers/BBQ-Burger.webp",
       "price": "160"
     },
     {
       "id": "79",
       "title": "Ranch Burger",
-      "image": "/img/burgers/Ranch Burger.png",
+      "image": "/img/burgers/Ranch-Burger.webp",
       "price": "160"
     },
     {
       "id": "80",
       "title": "Mushroom Burger",
-      "image": "/img/burgers/Mushroom Burger.png",
+      "image": "/img/burgers/Mushroom-Burger.webp",
       "price": "170"
     },
     {
       "id": "81",
       "title": "Fried Mozzarella Burger",
-      "image": "/img/burgers/Fried Mozzarella Burger.png",
+      "image": "/img/burgers/Fried-Mozzarella-Burger.webp",
       "price": "170"
     },
     {
       "id": "82",
       "title": "Keto Cheese Burger",
-      "image": "/img/burgers/Keto Cheese Burger.png",
+      "image": "/img/burgers/Keto-Cheese-Burger.webp",
       "price": "150"
     },
     {
       "id": "83",
       "title": "Keto Mushroom Burger",
-      "image": "/img/burgers/Keto Mushroom Burger.png",
+      "image": "/img/burgers/Keto-Mushroom-Burger.webp",
       "price": "160"
     },
     {
       "id": "84",
       "title": "Double Burger",
-      "image": "/img/burgers/Double Burger.png",
+      "image": "/img/burgers/Double-Burger.webp",
       "price": "200"
     },
     {
       "id": "85",
       "title": "Double Cheese Burger",
-      "image": "/img/burgers/Double Cheese Burger.png",
+      "image": "/img/burgers/Double-Cheese-Burger.webp",
       "price": "210"
     },
     {
       "id": "86",
       "title": "Double Mushroom Burger",
-      "image": "/img/burgers/Double Mushroom Burger.png",
+      "image": "/img/burgers/Double-Mushroom-Burger.webp",
       "price": "220"
     }
   ]

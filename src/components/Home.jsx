@@ -69,7 +69,7 @@ const Home = () => {
         }}
       >
         <h1 className="flex content-center justify-center  font-serif  text-5xl">
-          NEW-<span className="text-red-600">SALE</span>
+          <span className="text-red-600">OFFERS</span>
         </h1>
 
         <p className="mt-5 font-medium text-lg text-center px-4 flex justify-center items-center">

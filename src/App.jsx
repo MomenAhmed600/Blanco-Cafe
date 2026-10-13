@@ -16,7 +16,7 @@ const App = () => {
             fallback={
               <div className="flex justify-center items-center min-h-[60vh]">
                 <img
-                  src="/logo-2.png"
+                  src="./logo-2.png"
                   alt="logo"
                   className="w-20 h-20 mr-3 animate-spin"
                 />
